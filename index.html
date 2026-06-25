@@ -299,80 +299,77 @@
 <section class="completed" id="completed" aria-labelledby="completed-heading">
   <div class="container">
 
+    <!-- Header: headline left, tag + description right -->
     <div class="completed__header fade-up">
-      <span class="completed__eyebrow">Completed Projects</span>
-      <h2 class="completed__heading" id="completed-heading">Disciplined execution.<br>Proven returns.</h2>
+      <div>
+        <span class="completed__eyebrow">Completed Projects</span>
+        <h2 class="completed__heading" id="completed-heading">Disciplined execution.<br>Proven returns.</h2>
+      </div>
+      <div class="completed__header-right">
+        <span class="completed__tag">Sold — 2024 &nbsp;·&nbsp; Western New York, U.S.</span>
+        <p class="completed__desc">Acquired multiple off-market multifamily assets across Western New York — garden-style, townhome suburban, and street-front urban properties. Disciplined repositioning delivered strong risk-adjusted returns well ahead of schedule.</p>
+      </div>
     </div>
 
-    <div class="completed__body fade-up">
-
-      <!-- Left: project info -->
-      <div class="completed__info">
-        <span class="completed__tag">Sold — 2024</span>
-        <h3 class="completed__name">Western New York Portfolio</h3>
-        <p class="completed__location">Western New York, U.S.</p>
-        <p class="completed__desc">Acquired multiple off-market multifamily assets across Western New York over three years — garden-style, townhome suburban, and street-front urban properties. Strategic capital improvements and disciplined repositioning delivered strong risk-adjusted returns well ahead of schedule.</p>
-        <div class="completed__metrics">
-          <div class="completed__metric">
-            <div class="completed__metric-value">283</div>
-            <div class="completed__metric-label">Units across 14 properties</div>
-          </div>
-          <div class="completed__metric">
-            <div class="completed__metric-value">$13.6M</div>
-            <div class="completed__metric-label">Cumulative purchase price</div>
-          </div>
-          <div class="completed__metric">
-            <div class="completed__metric-value">$19.5M</div>
-            <div class="completed__metric-label">Cumulative sale price</div>
-          </div>
-          <div class="completed__metric">
-            <div class="completed__metric-value">33.6%</div>
-            <div class="completed__metric-label">Gross levered LP IRR (annual)</div>
-          </div>
-          <div class="completed__metric">
-            <div class="completed__metric-value">2.8 yrs</div>
-            <div class="completed__metric-label">Average hold period</div>
-          </div>
-          <div class="completed__metric">
-            <div class="completed__metric-value">$48K</div>
-            <div class="completed__metric-label">Avg. purchase price per unit</div>
-          </div>
-        </div>
-        <div class="completed__ctas">
-          <a href="#contact" class="btn-primary">Invest With Us</a>
-          <a href="#projects" class="btn-outline-white">Active Projects</a>
-        </div>
+    <!-- Metrics bar -->
+    <div class="completed__metrics-bar fade-up">
+      <div class="completed__metric">
+        <div class="completed__metric-value">283</div>
+        <div class="completed__metric-label">Units / 14 properties</div>
       </div>
-
-      <!-- Right: main image -->
-      <div class="completed__main-image">
-        <img
-          src="media/images/8-10-concord-drive-cheektowaga-ny-building-photo26.jpg"
-          alt="Cheektowaga multifamily property — Western New York Portfolio"
-          loading="lazy"
-        />
+      <div class="completed__metric">
+        <div class="completed__metric-value">$19.5M</div>
+        <div class="completed__metric-label">Cumulative sale price</div>
       </div>
-
+      <div class="completed__metric">
+        <div class="completed__metric-value">33.6%</div>
+        <div class="completed__metric-label">Gross levered LP IRR</div>
+      </div>
+      <div class="completed__metric">
+        <div class="completed__metric-value">2.8 yrs</div>
+        <div class="completed__metric-label">Average hold period</div>
+      </div>
     </div>
 
-    <!-- Gallery strip -->
+    <!-- Mosaic gallery -->
     <div class="completed__gallery fade-up">
-      <div class="completed__gallery-item">
-        <img src="media/images/Harlem-signage.jpg" alt="Corey-Harlem Apartments — Western New York" loading="lazy" />
+      <div class="completed__gallery-main lightbox-trigger" data-index="0">
+        <img src="media/images/8-10-concord-drive-cheektowaga-ny-building-photo26.jpg" alt="Cheektowaga — Western New York Portfolio" loading="lazy" />
+        <div class="completed__gallery-caption">Western New York Portfolio</div>
       </div>
-      <div class="completed__gallery-item">
-        <img src="media/images/Transit-Signage.jpg" alt="Lincoln Apartments — Western New York" loading="lazy" />
+      <div class="completed__gallery-side">
+        <div class="completed__gallery-item lightbox-trigger" data-index="1">
+          <img src="media/images/Harlem-signage.jpg" alt="Corey-Harlem Apartments" loading="lazy" />
+        </div>
+        <div class="completed__gallery-item lightbox-trigger" data-index="2">
+          <img src="media/images/Transit-Signage.jpg" alt="Lincoln Apartments" loading="lazy" />
+        </div>
+        <div class="completed__gallery-item lightbox-trigger" data-index="3">
+          <img src="media/images/Western-New-York-IInterior-1.jpg" alt="Renovated kitchen interior" loading="lazy" />
+        </div>
+        <div class="completed__gallery-item lightbox-trigger" data-index="4">
+          <img src="media/images/Western-New-York-Interior-3-e1738338400826.jpg" alt="Renovated bathroom interior" loading="lazy" />
+        </div>
       </div>
-      <div class="completed__gallery-item">
-        <img src="media/images/Western-New-York-IInterior-1.jpg" alt="Renovated kitchen interior" loading="lazy" />
-      </div>
-      <div class="completed__gallery-item">
-        <img src="media/images/Western-New-York-Interior-3-e1738338400826.jpg" alt="Renovated bathroom interior" loading="lazy" />
-      </div>
+    </div>
+
+    <!-- Single CTA -->
+    <div class="completed__cta fade-up">
+      <a href="mailto:info@18northcorp.com" class="btn-primary">Invest With Us</a>
     </div>
 
   </div>
 </section>
+
+<!-- ===== LIGHTBOX ===== -->
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
+  <button class="lightbox__close" aria-label="Close">&times;</button>
+  <button class="lightbox__prev" aria-label="Previous image">&#8592;</button>
+  <button class="lightbox__next" aria-label="Next image">&#8594;</button>
+  <div class="lightbox__img-wrap">
+    <img class="lightbox__img" src="" alt="" />
+  </div>
+</div>
 
 <!-- ===== THE 18 NORTH ADVANTAGE ===== -->
 <section class="advantage" id="advantage" aria-labelledby="advantage-heading">
