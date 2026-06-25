@@ -416,6 +416,7 @@ a { text-decoration: none; color: inherit; }
   color: var(--navy);
   line-height: 1;
   white-space: nowrap;
+  font-variant-numeric: tabular-nums;
 }
 .stats__label {
   font-size: 11px;

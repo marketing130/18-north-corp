@@ -31,6 +31,11 @@ function animateCounter(el) {
   const suffix = el.dataset.suffix || '';
   const isDecimal = el.dataset.decimal === 'true';
   const duration = 1800;
+
+  /* Lock the element width to its rendered size (full final value is in the
+     HTML before JS runs), so the layout never shifts as digits change. */
+  el.style.minWidth = el.offsetWidth + 'px';
+
   const start = performance.now();
 
   function update(now) {
