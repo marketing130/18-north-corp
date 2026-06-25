@@ -1062,6 +1062,7 @@ a { text-decoration: none; color: inherit; }
   .stats__inner { grid-template-columns: repeat(2, 1fr); }
   .stats__item:nth-child(2) { border-right: none; }
   .stats__item:nth-child(3) { border-right: 1px solid var(--border); }
+  .stats__item:nth-child(-n+2) { border-bottom: 1px solid var(--border); }
   .platform__grid { grid-template-columns: repeat(2, 1fr); }
   .projects__grid { grid-template-columns: 1fr 1fr; }
   .projects__grid .project-card:last-child { display: none; }
@@ -1100,8 +1101,10 @@ a { text-decoration: none; color: inherit; }
   .advantage__item:last-child { border-bottom: none; }
 
   .stats__inner { grid-template-columns: 1fr 1fr; }
-  .stats__item:nth-child(3) { border-right: 1px solid var(--border); }
+  .stats__item { padding: 36px 24px; }
   .stats__item:nth-child(2) { border-right: none; }
+  .stats__item:nth-child(3) { border-right: 1px solid var(--border); }
+  .stats__item:nth-child(-n+2) { border-bottom: 1px solid var(--border); }
 
   .completed__metrics-bar { grid-template-columns: repeat(2, 1fr); }
   .completed__gallery-main { height: 280px; }
