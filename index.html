@@ -18,8 +18,17 @@
 <header class="nav" id="nav">
   <div class="nav__inner">
     <a href="/" class="nav__logo">
-      <span class="nav__logo-main">18 North Corp</span>
-      <span class="nav__logo-sub">Real Estate Investment</span>
+      <img
+        class="nav__logo-icon"
+        src="media/images/18%20North%20Corp%20Logo%20-%20Icon%20Only.png"
+        alt="18 North Corp icon"
+        width="36"
+        height="36"
+      />
+      <div class="nav__logo-text">
+        <span class="nav__logo-main">18 North Corp</span>
+        <span class="nav__logo-sub">Real Estate Investment</span>
+      </div>
     </a>
     <nav aria-label="Primary">
       <ul class="nav__links">
@@ -40,8 +49,8 @@
 <section class="hero" id="hero">
   <!--
     VIDEO SOURCE: Replace src with your own hosted video file.
+    Drop .mp4 into media/videos/ and update the src below.
     Recommended: aerial multifamily / real estate footage at 1920×1080.
-    Free sources: Pexels.com, Coverr.co, Pixabay.com
   -->
   <video
     class="hero__video"
@@ -49,11 +58,10 @@
     muted
     loop
     playsinline
-    poster="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1920&q=80"
+    poster="media/images/West%20Apartments.JPG"
     aria-hidden="true"
   >
-    <source src="https://www.pexels.com/download/video/2169871/" type="video/mp4" />
-    <!-- Fallback: poster image shows if video fails to load -->
+    <source src="media/videos/hero.mp4" type="video/mp4" />
   </video>
   <div class="hero__overlay" aria-hidden="true"></div>
   <div class="hero__content">
@@ -114,8 +122,8 @@
       </div>
       <div class="overview__image fade-up">
         <img
-          src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=900&q=80"
-          alt="Multifamily residential community exterior"
+          src="media/images/Sterling%20Park%20(1).jpg"
+          alt="Sterling Park multifamily community aerial view"
           loading="lazy"
         />
         <div class="overview__tag">
@@ -186,23 +194,23 @@
       <div class="project-card fade-up">
         <div class="project-card__image">
           <img
-            src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=900&q=80"
-            alt="Autumn Ridge Apartments exterior"
+            src="media/images/Sterling%20Park.jpg"
+            alt="Sterling Park multifamily community aerial"
             loading="lazy"
           />
         </div>
         <div class="project-card__body">
           <span class="project-card__status">Active — Value-Add</span>
-          <h3 class="project-card__name">Autumn Ridge</h3>
-          <p class="project-card__location">Oklahoma City, Oklahoma</p>
+          <h3 class="project-card__name">Sterling Park</h3>
+          <p class="project-card__location">Tulsa, Oklahoma</p>
           <div class="project-card__metrics">
             <div>
-              <div class="project-card__metric-value">148</div>
+              <div class="project-card__metric-value">290</div>
               <div class="project-card__metric-label">Units</div>
             </div>
             <div>
-              <div class="project-card__metric-value">$6.2M</div>
-              <div class="project-card__metric-label">Acquisition</div>
+              <div class="project-card__metric-value">Value-Add</div>
+              <div class="project-card__metric-label">Strategy</div>
             </div>
             <div>
               <div class="project-card__metric-value">Full</div>
@@ -217,23 +225,23 @@
       <div class="project-card fade-up">
         <div class="project-card__image">
           <img
-            src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=700&q=80"
-            alt="Sterling Briarwood Apartments"
+            src="media/images/The%20Sterling.jpg"
+            alt="The Sterling multifamily community aerial"
             loading="lazy"
           />
         </div>
         <div class="project-card__body">
           <span class="project-card__status">Active — Value-Add</span>
-          <h3 class="project-card__name">Sterling Briarwood</h3>
-          <p class="project-card__location">Tulsa, Oklahoma</p>
+          <h3 class="project-card__name">The Sterling</h3>
+          <p class="project-card__location">Oklahoma City, Oklahoma</p>
           <div class="project-card__metrics">
             <div>
-              <div class="project-card__metric-value">96</div>
+              <div class="project-card__metric-value">120</div>
               <div class="project-card__metric-label">Units</div>
             </div>
             <div>
-              <div class="project-card__metric-value">$4.1M</div>
-              <div class="project-card__metric-label">Acquisition</div>
+              <div class="project-card__metric-value">Value-Add</div>
+              <div class="project-card__metric-label">Strategy</div>
             </div>
           </div>
           <a href="#contact" class="arrow-link">View Project <span>→</span></a>
@@ -244,23 +252,23 @@
       <div class="project-card fade-up">
         <div class="project-card__image">
           <img
-            src="https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?w=700&q=80"
-            alt="Reserve on 29th development"
+            src="media/images/Reserve%20at%20151st%2C%20Bixby.JPG"
+            alt="Reserve at 151st ground-up development, Bixby Oklahoma"
             loading="lazy"
           />
         </div>
         <div class="project-card__body">
           <span class="project-card__status">Active — Ground-Up</span>
-          <h3 class="project-card__name">Reserve on 29th</h3>
-          <p class="project-card__location">Fayetteville, Arkansas</p>
+          <h3 class="project-card__name">Reserve at 151st</h3>
+          <p class="project-card__location">Bixby, Oklahoma</p>
           <div class="project-card__metrics">
-            <div>
-              <div class="project-card__metric-value">72</div>
-              <div class="project-card__metric-label">Units</div>
-            </div>
             <div>
               <div class="project-card__metric-value">New</div>
               <div class="project-card__metric-label">Construction</div>
+            </div>
+            <div>
+              <div class="project-card__metric-value">Ground-Up</div>
+              <div class="project-card__metric-label">Strategy</div>
             </div>
           </div>
           <a href="#contact" class="arrow-link">View Project <span>→</span></a>
@@ -316,8 +324,19 @@
   <div class="container">
     <div class="footer__top">
       <div>
-        <div class="footer__brand-name">18 North Corp</div>
-        <div class="footer__brand-sub">Real Estate Investment</div>
+        <div class="footer__brand">
+          <img
+            class="footer__brand-icon"
+            src="media/images/18%20North%20Corp%20Logo%20-%20Icon%20Only.png"
+            alt="18 North Corp"
+            width="40"
+            height="40"
+          />
+          <div>
+            <div class="footer__brand-name">18 North Corp</div>
+            <div class="footer__brand-sub">Real Estate Investment</div>
+          </div>
+        </div>
         <p class="footer__tagline">A vertically integrated real estate investment, development, and management firm focused on value-add multifamily.</p>
       </div>
       <div>
@@ -343,7 +362,7 @@
         <ul class="footer__links">
           <li><a href="#projects">Oklahoma City, OK</a></li>
           <li><a href="#projects">Tulsa, OK</a></li>
-          <li><a href="#projects">Fayetteville, AR</a></li>
+          <li><a href="#projects">Bixby, OK</a></li>
           <li><a href="#contact">Other U.S. Markets</a></li>
         </ul>
       </div>
