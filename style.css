@@ -719,6 +719,96 @@ a { text-decoration: none; color: inherit; }
 }
 .performance__footer {
   margin-top: 56px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* ===== COMPLETED PROJECT CARD ===== */
+.completed__card {
+  border: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 56px;
+}
+.completed__card-top {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 60px;
+  padding: 48px 48px 44px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  align-items: start;
+}
+.completed__tag {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--stone);
+  border: 1px solid rgba(184,169,138,0.35);
+  padding: 5px 12px;
+  margin-bottom: 20px;
+}
+.completed__name {
+  font-size: clamp(22px, 2.5vw, 32px);
+  font-weight: 400;
+  letter-spacing: -0.8px;
+  color: var(--white);
+  margin-bottom: 8px;
+  line-height: 1.15;
+}
+.completed__location {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+}
+.completed__desc {
+  font-size: 15px;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.48);
+  align-self: center;
+}
+.completed__metrics {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  border-top: none;
+}
+.completed__metric {
+  padding: 32px 28px;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+.completed__metric:last-child { border-right: none; }
+.completed__metric-value {
+  font-size: clamp(22px, 2.2vw, 32px);
+  font-weight: 400;
+  letter-spacing: -1px;
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.completed__metric-label {
+  font-size: 11px;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.38);
+}
+
+@media (max-width: 1024px) {
+  .completed__card-top { grid-template-columns: 1fr; gap: 24px; }
+  .completed__metrics { grid-template-columns: repeat(3, 1fr); }
+  .completed__metric:nth-child(3) { border-right: none; }
+  .completed__metric:nth-child(4),
+  .completed__metric:nth-child(5),
+  .completed__metric:nth-child(6) { border-top: 1px solid rgba(255,255,255,0.08); }
+}
+@media (max-width: 768px) {
+  .completed__card-top { padding: 32px 28px; }
+  .completed__metrics { grid-template-columns: repeat(2, 1fr); }
+  .completed__metric:nth-child(2n) { border-right: none; }
+  .completed__metric:nth-child(3) { border-right: 1px solid rgba(255,255,255,0.08); }
+  .completed__metric:not(:nth-child(1)):not(:nth-child(2)) { border-top: 1px solid rgba(255,255,255,0.08); }
+  .completed__metric { padding: 24px 20px; }
 }
 
 /* ===== ADVANTAGE ===== */
