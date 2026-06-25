@@ -1100,6 +1100,7 @@ a { text-decoration: none; color: inherit; }
 
   .advantage__grid { grid-template-columns: 1fr; }
   .advantage__item { border-right: none; border-bottom: 1px solid var(--border); }
+  .advantage__item:nth-last-child(-n+3) { border-bottom: 1px solid var(--border); }
   .advantage__item:last-child { border-bottom: none; }
 
   .stats__inner { grid-template-columns: 1fr 1fr; }
