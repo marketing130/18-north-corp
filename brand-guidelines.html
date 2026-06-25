@@ -1,0 +1,1529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>18 North Corp — Brand Guidelines</title>
+  <link rel="icon" type="image/png" href="media/images/Favicon-18North-Corp.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+
+/* =============================================
+   RESET & BASE
+   ============================================= */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* Brand Colours */
+  --white:      #FFFFFF;
+  --off-white:  #F4F6FA;
+  --charcoal:   #0D1117;
+  --grey:       #5A6270;
+  --navy:       #1499D0;
+  --navy-dark:  #0E7AAA;
+  --near-black: #0A1628;
+  --stone:      #B8A98A;
+  --border:     #DDE3EE;
+
+  /* Layout */
+  --font: 'Inter', system-ui, sans-serif;
+  --max:  1180px;
+  --pad:  120px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font);
+  background: var(--white);
+  color: var(--charcoal);
+  -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 56px;
+}
+
+/* =============================================
+   SHARED TYPOGRAPHY
+   ============================================= */
+.section-label {
+  display: block;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--stone);
+  margin-bottom: 16px;
+}
+.section-title {
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 400;
+  letter-spacing: -1.2px;
+  line-height: 1.1;
+  color: var(--charcoal);
+  margin-bottom: 16px;
+}
+.section-desc {
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--grey);
+  max-width: 640px;
+}
+.divider {
+  width: 100%;
+  height: 1px;
+  background: var(--border);
+  margin: 80px 0;
+}
+
+/* =============================================
+   TOP BAR
+   ============================================= */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+.topbar__inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.topbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.topbar__logo img {
+  height: 28px;
+  width: auto;
+}
+.topbar__logo-text {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--charcoal);
+}
+.topbar__doc {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--stone);
+}
+.topbar__nav {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+.topbar__nav a {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--grey);
+  transition: color 0.2s;
+}
+.topbar__nav a:hover { color: var(--charcoal); }
+
+/* =============================================
+   COVER
+   ============================================= */
+.cover {
+  background: var(--near-black);
+  min-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+.cover::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 70% 40%, rgba(20,153,208,0.12) 0%, transparent 65%);
+  pointer-events: none;
+}
+.cover__grid-lines {
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background-image:
+    linear-gradient(var(--white) 1px, transparent 1px),
+    linear-gradient(90deg, var(--white) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+.cover__inner {
+  position: relative;
+  z-index: 1;
+}
+.cover__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+.cover__logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.cover__logo img {
+  height: 44px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+.cover__logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.cover__logo-name {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--white);
+  line-height: 1;
+}
+.cover__logo-sub {
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--stone);
+}
+.cover__sep {
+  width: 1px;
+  height: 32px;
+  background: rgba(255,255,255,0.15);
+}
+.cover__doc-label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+}
+.cover__headline {
+  font-size: clamp(52px, 7vw, 96px);
+  font-weight: 300;
+  letter-spacing: -4px;
+  line-height: 0.95;
+  color: var(--white);
+  margin-bottom: 40px;
+}
+.cover__headline em {
+  font-style: normal;
+  color: var(--navy);
+}
+.cover__meta {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.cover__meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.cover__meta-label {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+}
+.cover__meta-value {
+  font-size: 13px;
+  color: rgba(255,255,255,0.65);
+}
+
+/* =============================================
+   SECTIONS
+   ============================================= */
+.bg-white  { background: var(--white); }
+.bg-off    { background: var(--off-white); }
+.bg-dark   { background: var(--near-black); }
+
+section.guide-section {
+  padding: var(--pad) 0;
+  border-top: 1px solid var(--border);
+}
+section.guide-section.dark {
+  border-top-color: rgba(255,255,255,0.07);
+}
+.section-header {
+  margin-bottom: 64px;
+}
+
+/* =============================================
+   01 — BRAND OVERVIEW
+   ============================================= */
+.overview-pillars {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-top: 56px;
+}
+.overview-pillar {
+  background: var(--white);
+  padding: 36px 28px;
+}
+.overview-pillar__word {
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: -0.4px;
+  color: var(--charcoal);
+  margin-bottom: 10px;
+}
+.overview-pillar__desc {
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--grey);
+}
+.overview-pillar__num {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--stone);
+  margin-bottom: 20px;
+  display: block;
+}
+
+/* =============================================
+   02 — COLOUR PALETTE
+   ============================================= */
+.palette-group {
+  margin-bottom: 56px;
+}
+.palette-group-title {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--grey);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+.palette-swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+}
+.swatch {
+  border-radius: 2px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.swatch__color {
+  height: 100px;
+  width: 100%;
+}
+.swatch__info {
+  padding: 14px 16px;
+  background: var(--white);
+}
+.swatch__name {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--charcoal);
+  margin-bottom: 3px;
+}
+.swatch__hex {
+  font-size: 11px;
+  color: var(--grey);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.3px;
+}
+.swatch__use {
+  font-size: 10px;
+  color: var(--stone);
+  margin-top: 5px;
+  line-height: 1.5;
+}
+
+/* =============================================
+   03 — TYPOGRAPHY
+   ============================================= */
+.type-specimen {
+  border: 1px solid var(--border);
+  padding: 56px;
+  margin-bottom: 2px;
+  background: var(--white);
+}
+.type-specimen + .type-specimen { margin-top: 2px; }
+.type-meta {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.type-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.type-meta-label {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--stone);
+}
+.type-meta-value {
+  font-size: 12px;
+  color: var(--grey);
+}
+.type-sample { color: var(--charcoal); }
+.type-scale {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  border: 1px solid var(--border);
+  padding: 48px 56px;
+  background: var(--white);
+}
+.type-scale-row {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--border);
+}
+.type-scale-row:last-child { border-bottom: none; padding-bottom: 0; }
+.type-scale-tag {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--stone);
+  min-width: 80px;
+  flex-shrink: 0;
+}
+.type-scale-text { color: var(--charcoal); }
+
+/* =============================================
+   04 — LOGO USAGE
+   ============================================= */
+.logo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  border: 1px solid var(--border);
+}
+.logo-panel {
+  padding: 60px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 260px;
+}
+.logo-panel--white  { background: var(--white); }
+.logo-panel--off    { background: var(--off-white); }
+.logo-panel--dark   { background: var(--near-black); }
+.logo-panel--navy   { background: var(--navy); }
+.logo-panel__display {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+.logo-panel__display img {
+  height: 44px;
+  width: auto;
+}
+.logo-panel__name {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.logo-panel__company {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.logo-panel__sub {
+  font-size: 8px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--stone);
+}
+.logo-panel__label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.logo-panel--white .logo-panel__company,
+.logo-panel--off .logo-panel__company  { color: var(--charcoal); }
+.logo-panel--white .logo-panel__label,
+.logo-panel--off .logo-panel__label   { color: var(--stone); }
+.logo-panel--dark .logo-panel__company,
+.logo-panel--navy .logo-panel__company { color: var(--white); }
+.logo-panel--dark .logo-panel__label  { color: rgba(255,255,255,0.35); }
+.logo-panel--navy .logo-panel__label  { color: rgba(255,255,255,0.55); }
+
+.logo-rules {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  margin-top: 2px;
+  border: 1px solid var(--border);
+  border-top: none;
+}
+.logo-rule {
+  padding: 36px 40px;
+  background: var(--off-white);
+}
+.logo-rule--do   { border-left: 3px solid #22C55E; }
+.logo-rule--dont { border-left: 3px solid #EF4444; }
+.logo-rule__tag {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.logo-rule--do   .logo-rule__tag { color: #22C55E; }
+.logo-rule--dont .logo-rule__tag { color: #EF4444; }
+.logo-rule ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.logo-rule li {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--grey);
+  padding-left: 14px;
+  position: relative;
+}
+.logo-rule li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--stone);
+  font-size: 11px;
+}
+
+/* =============================================
+   05 — UI ELEMENTS
+   ============================================= */
+.ui-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  padding: 40px 44px;
+  border: 1px solid var(--border);
+  background: var(--white);
+  margin-bottom: 2px;
+}
+.ui-row--dark {
+  background: var(--near-black);
+  border-color: rgba(255,255,255,0.07);
+}
+.ui-row-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--stone);
+  width: 100%;
+  margin-bottom: 8px;
+}
+.btn-primary {
+  display: inline-block;
+  background: var(--navy);
+  color: var(--white);
+  font-family: var(--font);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border: 1px solid var(--navy);
+  cursor: default;
+}
+.btn-primary-hover {
+  display: inline-block;
+  background: var(--navy-dark);
+  color: var(--white);
+  font-family: var(--font);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border: 1px solid var(--navy-dark);
+  cursor: default;
+}
+.btn-secondary {
+  display: inline-block;
+  background: transparent;
+  color: var(--charcoal);
+  font-family: var(--font);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border: 1px solid #D8D8D2;
+  cursor: default;
+}
+.btn-secondary-hover {
+  display: inline-block;
+  background: var(--navy);
+  color: var(--white);
+  font-family: var(--font);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border: 1px solid var(--navy);
+  cursor: default;
+}
+.btn-state-label {
+  font-size: 10px;
+  color: var(--stone);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-left: 4px;
+}
+.ui-text-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--navy);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1px solid var(--navy);
+  padding-bottom: 2px;
+}
+.ui-text-link-plain {
+  font-size: 14px;
+  color: var(--navy);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1px solid transparent;
+}
+
+/* =============================================
+   06 — VOICE & TONE
+   ============================================= */
+.tone-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  border: 1px solid var(--border);
+}
+.tone-card {
+  padding: 44px 44px;
+  background: var(--white);
+}
+.tone-card__tag {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.tone-card--yes .tone-card__tag { color: #22C55E; }
+.tone-card--no  .tone-card__tag { color: #EF4444; }
+.tone-card__example {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.4px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+.tone-card--yes .tone-card__example { color: var(--charcoal); }
+.tone-card--no  .tone-card__example { color: var(--grey); text-decoration: line-through; text-decoration-color: #EF4444; }
+.tone-card__note {
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--grey);
+}
+.voice-attrs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  border: 1px solid var(--border);
+  margin-top: 2px;
+}
+.voice-attr {
+  padding: 36px 36px;
+  background: var(--off-white);
+}
+.voice-attr__word {
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  color: var(--charcoal);
+  margin-bottom: 10px;
+}
+.voice-attr__opp {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--stone);
+  margin-bottom: 10px;
+}
+.voice-attr__desc {
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--grey);
+}
+
+/* =============================================
+   07 — IMAGERY
+   ============================================= */
+.imagery-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 4px;
+}
+.imagery-cell {
+  overflow: hidden;
+  position: relative;
+}
+.imagery-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.95);
+}
+.imagery-cell--tall { height: 440px; }
+.imagery-cell--short { height: 213px; }
+.imagery-cell__caption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 14px 18px;
+  background: linear-gradient(to top, rgba(10,22,40,0.7), transparent);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.75);
+}
+.imagery-rules {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  margin-top: 2px;
+  border: 1px solid var(--border);
+}
+.imagery-rule {
+  padding: 36px 40px;
+  background: var(--off-white);
+}
+.imagery-rule--do   { border-left: 3px solid #22C55E; }
+.imagery-rule--dont { border-left: 3px solid #EF4444; }
+.imagery-rule__tag {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.imagery-rule--do   .imagery-rule__tag { color: #22C55E; }
+.imagery-rule--dont .imagery-rule__tag { color: #EF4444; }
+.imagery-rule ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.imagery-rule li {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--grey);
+  padding-left: 14px;
+  position: relative;
+}
+.imagery-rule li::before { content: '—'; position: absolute; left: 0; color: var(--stone); font-size: 11px; }
+
+/* =============================================
+   08 — SPACING & LAYOUT
+   ============================================= */
+.spacing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  border: 1px solid var(--border);
+}
+.spacing-item {
+  background: var(--white);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.spacing-bar {
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  width: 100%;
+  flex-shrink: 0;
+}
+.spacing-item__value {
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: -1px;
+  color: var(--navy);
+}
+.spacing-item__label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--grey);
+}
+.spacing-item__use {
+  font-size: 12px;
+  color: var(--stone);
+  line-height: 1.5;
+}
+.layout-rule-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  border: 1px solid var(--border);
+  margin-top: 2px;
+}
+.layout-rule {
+  background: var(--white);
+  padding: 36px 36px;
+  border-right: 1px solid var(--border);
+}
+.layout-rule:last-child { border-right: none; }
+.layout-rule__num {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--stone);
+  margin-bottom: 16px;
+  display: block;
+}
+.layout-rule__title {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--charcoal);
+  margin-bottom: 10px;
+  letter-spacing: -0.3px;
+}
+.layout-rule__desc {
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--grey);
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
+.doc-footer {
+  background: var(--near-black);
+  padding: 56px 0;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.doc-footer__inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.doc-footer__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.doc-footer__brand img {
+  height: 32px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+.doc-footer__brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.doc-footer__brand-name {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--white);
+}
+.doc-footer__brand-sub {
+  font-size: 8px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--stone);
+}
+.doc-footer__right {
+  text-align: right;
+}
+.doc-footer__version {
+  font-size: 11px;
+  color: rgba(255,255,255,0.25);
+  margin-bottom: 4px;
+}
+.doc-footer__note {
+  font-size: 11px;
+  color: rgba(255,255,255,0.18);
+}
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+@media (max-width: 900px) {
+  :root { --pad: 72px; }
+  .wrap { padding: 0 28px; }
+  .topbar__inner { padding: 0 28px; }
+  .topbar__nav { display: none; }
+  .overview-pillars { grid-template-columns: repeat(2, 1fr); }
+  .logo-grid, .logo-rules, .tone-grid, .imagery-rules,
+  .imagery-grid, .spacing-grid, .layout-rule-grid,
+  .voice-attrs { grid-template-columns: 1fr; }
+  .type-specimen, .type-scale { padding: 36px; }
+  .cover__headline { letter-spacing: -2px; }
+  .doc-footer__inner { padding: 0 28px; }
+}
+
+  </style>
+</head>
+<body>
+
+<!-- ===== TOP BAR ===== -->
+<header class="topbar">
+  <div class="topbar__inner">
+    <div class="topbar__logo">
+      <img src="media/images/18%20North%20Corp%20Logo%20-%20Icon%20Only.png" alt="18 North Corp" />
+      <span class="topbar__logo-text">18 North Corp</span>
+    </div>
+    <nav>
+      <ul class="topbar__nav">
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#colours">Colours</a></li>
+        <li><a href="#typography">Typography</a></li>
+        <li><a href="#logo">Logo</a></li>
+        <li><a href="#ui">UI Elements</a></li>
+        <li><a href="#voice">Voice</a></li>
+        <li><a href="#imagery">Imagery</a></li>
+        <li><a href="#layout">Layout</a></li>
+      </ul>
+    </nav>
+    <span class="topbar__doc">Brand Guidelines</span>
+  </div>
+</header>
+
+<!-- ===== COVER ===== -->
+<section class="cover">
+  <div class="cover__grid-lines" aria-hidden="true"></div>
+  <div class="wrap cover__inner">
+    <div class="cover__eyebrow">
+      <div class="cover__logo">
+        <img src="media/images/18%20North%20Corp%20Logo%20-%20Icon%20Only.png" alt="18 North Corp" />
+        <div class="cover__logo-text">
+          <span class="cover__logo-name">18 North Corp</span>
+          <span class="cover__logo-sub">Real Estate Investment</span>
+        </div>
+      </div>
+      <div class="cover__sep"></div>
+      <span class="cover__doc-label">Brand Guidelines</span>
+    </div>
+    <h1 class="cover__headline">Brand<br><em>Standards</em><br>&amp; Identity</h1>
+    <div class="cover__meta">
+      <div class="cover__meta-item">
+        <span class="cover__meta-label">Version</span>
+        <span class="cover__meta-value">1.0</span>
+      </div>
+      <div class="cover__meta-item">
+        <span class="cover__meta-label">Issued</span>
+        <span class="cover__meta-value">June 2025</span>
+      </div>
+      <div class="cover__meta-item">
+        <span class="cover__meta-label">Prepared for</span>
+        <span class="cover__meta-value">18 North Corp</span>
+      </div>
+      <div class="cover__meta-item">
+        <span class="cover__meta-label">Status</span>
+        <span class="cover__meta-value">Active</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 01 BRAND OVERVIEW ===== -->
+<section class="guide-section bg-white" id="overview">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="section-label">01 — Brand Overview</span>
+      <h2 class="section-title">Minimal. Modern. Institutionally credible.</h2>
+      <p class="section-desc">18 North Corp is a vertically integrated real estate investment, development, and management firm. The brand should feel disciplined, confident, and premium — suitable for investors, lenders, institutional partners, and development collaborators.</p>
+    </div>
+    <div class="overview-pillars">
+      <div class="overview-pillar">
+        <span class="overview-pillar__num">01</span>
+        <div class="overview-pillar__word">Professional</div>
+        <div class="overview-pillar__desc">Suitable for institutional audiences, investors, lenders, and strategic partners at every touchpoint.</div>
+      </div>
+      <div class="overview-pillar">
+        <span class="overview-pillar__num">02</span>
+        <div class="overview-pillar__word">Minimal</div>
+        <div class="overview-pillar__desc">Generous white space, clean layouts, restrained colour, and no unnecessary ornamentation.</div>
+      </div>
+      <div class="overview-pillar">
+        <span class="overview-pillar__num">03</span>
+        <div class="overview-pillar__word">Modern</div>
+        <div class="overview-pillar__desc">Avoids heavy gradients, excessive icons, and overly decorative elements. Always current.</div>
+      </div>
+      <div class="overview-pillar">
+        <span class="overview-pillar__num">04</span>
+        <div class="overview-pillar__word">Confident</div>
+        <div class="overview-pillar__desc">Large typography, strong spacing, and refined imagery — no visual noise or over-explanation.</div>
+      </div>
+      <div class="overview-pillar">
+        <span class="overview-pillar__num">05</span>
+        <div class="overview-pillar__word">Strategic</div>
+        <div class="overview-pillar__desc">Communicates discipline, performance, data, and operational control at every touchpoint.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 02 COLOURS ===== -->
+<section class="guide-section bg-off" id="colours">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="section-label">02 — Colour Palette</span>
+      <h2 class="section-title">Restrained, refined, institutional.</h2>
+      <p class="section-desc">The palette is anchored in white, black, and soft grey — with a vivid corporate blue drawn directly from the 18 North logo. Use the accent colours sparingly and with purpose.</p>
+    </div>
+
+    <div class="palette-group">
+      <div class="palette-group-title">Primary Colours</div>
+      <div class="palette-swatches">
+        <div class="swatch">
+          <div class="swatch__color" style="background:#FFFFFF; border-bottom:1px solid var(--border);"></div>
+          <div class="swatch__info">
+            <div class="swatch__name">White</div>
+            <div class="swatch__hex">#FFFFFF</div>
+            <div class="swatch__use">Dominant background colour</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch__color" style="background:#F4F6FA;"></div>
+          <div class="swatch__info">
+            <div class="swatch__name">Soft Off-White</div>
+            <div class="swatch__hex">#F4F6FA</div>
+            <div class="swatch__use">Section breaks, subtle contrast</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch__color" style="background:#0D1117;"></div>
+          <div class="swatch__info">
+            <div class="swatch__name">Charcoal Black</div>
+            <div class="swatch__hex">#0D1117</div>
+            <div class="swatch__use">Headlines, navigation, primary text</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch__color" style="background:#5A6270;"></div>
+          <div class="swatch__info">
+            <div class="swatch__name">Corporate Grey</div>
+            <div class="swatch__hex">#5A6270</div>
+            <div class="swatch__use">Body copy, captions, labels</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch__color" style="background:#DDE3EE;"></div>
+          <div class="swatch__info">
+            <div class="swatch__name">Border Grey</div>
+            <div class="swatch__hex">#DDE3EE</div>
+            <div class="swatch__use">Dividers, card borders, rules</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="palette-group">
+      <div class="palette-group-title">Accent Colours</div>
+      <div class="palette-swatches">
+        <div class="swatch">
+          <div class="swatch__color" style="background:#1499D0;"></div>
+          <div class="swatch__info">
+            <div class="swatch__name">Brand Blue</div>
+            <div class="swatch__hex">#1499D0</div>
+            <div class="swatch__use">Buttons, links, stat highlights, nav CTA</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch__color" style="background:#0E7AAA;"></div>
+          <div class="swatch__info">
+            <div class="swatch__name">Navy Dark</div>
+            <div class="swatch__hex">#0E7AAA</div>
+            <div class="swatch__use">Button hover states only</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch__color" style="background:#B8A98A;"></div>
+          <div class="swatch__info">
+            <div class="swatch__name">Warm Stone</div>
+            <div class="swatch__hex">#B8A98A</div>
+            <div class="swatch__use">Labels, dividers, section eyebrows</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch__color" style="background:#0A1628;"></div>
+          <div class="swatch__info">
+            <div class="swatch__name">Near Black</div>
+            <div class="swatch__hex">#0A1628</div>
+            <div class="swatch__use">Footer, investor CTA, dark sections</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 03 TYPOGRAPHY ===== -->
+<section class="guide-section bg-white" id="typography">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="section-label">03 — Typography</span>
+      <h2 class="section-title">Inter — clean, modern, institutional.</h2>
+      <p class="section-desc">A single typeface family is used across all brand communications. Inter is highly legible, professional, and well-suited to large displays and body copy alike. No decorative or display fonts are used.</p>
+    </div>
+
+    <div class="type-specimen">
+      <div class="type-meta">
+        <div class="type-meta-item"><span class="type-meta-label">Role</span><span class="type-meta-value">Hero Headline</span></div>
+        <div class="type-meta-item"><span class="type-meta-label">Size</span><span class="type-meta-value">56–72px desktop / 38px mobile</span></div>
+        <div class="type-meta-item"><span class="type-meta-label">Weight</span><span class="type-meta-value">400 Regular</span></div>
+        <div class="type-meta-item"><span class="type-meta-label">Tracking</span><span class="type-meta-value">−2.5px</span></div>
+        <div class="type-meta-item"><span class="type-meta-label">Line Height</span><span class="type-meta-value">1.05</span></div>
+      </div>
+      <p class="type-sample" style="font-size:clamp(40px,5.5vw,68px);font-weight:400;letter-spacing:-2.5px;line-height:1.05;">Vertically Integrated Real Estate Investment &amp; Development</p>
+    </div>
+
+    <div class="type-specimen" style="margin-top:2px;">
+      <div class="type-meta">
+        <div class="type-meta-item"><span class="type-meta-label">Role</span><span class="type-meta-value">Section Heading</span></div>
+        <div class="type-meta-item"><span class="type-meta-label">Size</span><span class="type-meta-value">32–52px</span></div>
+        <div class="type-meta-item"><span class="type-meta-label">Weight</span><span class="type-meta-value">400 Regular</span></div>
+        <div class="type-meta-item"><span class="type-meta-label">Tracking</span><span class="type-meta-value">−1.2px</span></div>
+      </div>
+      <p class="type-sample" style="font-size:clamp(28px,3.5vw,48px);font-weight:400;letter-spacing:-1.2px;line-height:1.1;">Built to invest, develop, and manage — under one roof</p>
+    </div>
+
+    <div class="type-specimen" style="margin-top:2px;">
+      <div class="type-meta">
+        <div class="type-meta-item"><span class="type-meta-label">Role</span><span class="type-meta-value">Body Copy</span></div>
+        <div class="type-meta-item"><span class="type-meta-label">Size</span><span class="type-meta-value">16–17px</span></div>
+        <div class="type-meta-item"><span class="type-meta-label">Weight</span><span class="type-meta-value">400 Regular</span></div>
+        <div class="type-meta-item"><span class="type-meta-label">Line Height</span><span class="type-meta-value">1.75</span></div>
+        <div class="type-meta-item"><span class="type-meta-label">Colour</span><span class="type-meta-value">Corporate Grey #5A6270</span></div>
+      </div>
+      <p class="type-sample" style="font-size:17px;font-weight:400;line-height:1.75;color:var(--grey);max-width:680px;">18 North Corp is a privately held real estate investment and operating company specializing in value-add multifamily acquisitions and ground-up development. Our vertically integrated platform means we control quality and performance at every stage of the investment lifecycle.</p>
+    </div>
+
+    <div style="margin-top:2px;">
+      <div class="type-scale">
+        <div class="type-scale-row">
+          <span class="type-scale-tag">Label</span>
+          <span class="type-scale-text" style="font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--stone);">OUR PLATFORM</span>
+        </div>
+        <div class="type-scale-row">
+          <span class="type-scale-tag">Stat</span>
+          <span class="type-scale-text" style="font-size:64px;font-weight:400;letter-spacing:-3px;line-height:1;color:var(--navy);">$750M+</span>
+        </div>
+        <div class="type-scale-row">
+          <span class="type-scale-tag">Nav</span>
+          <span class="type-scale-text" style="font-size:12px;font-weight:500;letter-spacing:0.8px;text-transform:uppercase;color:var(--grey);">About Us &nbsp;&nbsp; Verticals &nbsp;&nbsp; Projects &nbsp;&nbsp; Contact Us</span>
+        </div>
+        <div class="type-scale-row">
+          <span class="type-scale-tag">Button</span>
+          <span class="type-scale-text" style="font-size:12px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--charcoal);">Contact Us &nbsp;&nbsp; Our Platform &nbsp;&nbsp; View Projects</span>
+        </div>
+        <div class="type-scale-row">
+          <span class="type-scale-tag">Caption</span>
+          <span class="type-scale-text" style="font-size:12px;font-weight:400;letter-spacing:0.2px;color:var(--grey);">Sterling Park, Tulsa Oklahoma — Value-Add Acquisition</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 04 LOGO ===== -->
+<section class="guide-section bg-off" id="logo">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="section-label">04 — Logo Usage</span>
+      <h2 class="section-title">Consistent, unaltered, always premium.</h2>
+      <p class="section-desc">The 18 North Corp mark is used without modification. No effects, shadows, gradients, or colour changes. Always allow generous clear space around the logo and use only on approved backgrounds.</p>
+    </div>
+    <div class="logo-grid">
+      <div class="logo-panel logo-panel--white">
+        <div class="logo-panel__display">
+          <img src="media/images/18%20North%20Corp%20Logo%20-%20Icon%20Only.png" alt="18 North Corp logo" />
+          <div class="logo-panel__name">
+            <span class="logo-panel__company">18 North Corp</span>
+            <span class="logo-panel__sub">Real Estate Investment</span>
+          </div>
+        </div>
+        <span class="logo-panel__label">White Background — Primary</span>
+      </div>
+      <div class="logo-panel logo-panel--off">
+        <div class="logo-panel__display">
+          <img src="media/images/18%20North%20Corp%20Logo%20-%20Icon%20Only.png" alt="18 North Corp logo" />
+          <div class="logo-panel__name">
+            <span class="logo-panel__company">18 North Corp</span>
+            <span class="logo-panel__sub">Real Estate Investment</span>
+          </div>
+        </div>
+        <span class="logo-panel__label">Off-White Background — Acceptable</span>
+      </div>
+      <div class="logo-panel logo-panel--dark">
+        <div class="logo-panel__display">
+          <img src="media/images/18%20North%20Corp%20Logo%20-%20Icon%20Only.png" alt="18 North Corp logo" style="filter:brightness(0) invert(1);" />
+          <div class="logo-panel__name">
+            <span class="logo-panel__company">18 North Corp</span>
+            <span class="logo-panel__sub">Real Estate Investment</span>
+          </div>
+        </div>
+        <span class="logo-panel__label">Dark Background — White Version</span>
+      </div>
+      <div class="logo-panel logo-panel--navy" style="background:var(--navy);">
+        <div class="logo-panel__display">
+          <img src="media/images/18%20North%20Corp%20Logo%20-%20Icon%20Only.png" alt="18 North Corp logo" style="filter:brightness(0) invert(1);" />
+          <div class="logo-panel__name">
+            <span class="logo-panel__company" style="color:var(--white);">18 North Corp</span>
+            <span class="logo-panel__sub">Real Estate Investment</span>
+          </div>
+        </div>
+        <span class="logo-panel__label" style="color:rgba(255,255,255,0.55);">Brand Blue — Avoid where possible</span>
+      </div>
+    </div>
+    <div class="logo-rules">
+      <div class="logo-rule logo-rule--do">
+        <div class="logo-rule__tag">Do</div>
+        <ul>
+          <li>Use logo on white, off-white, or dark navy backgrounds</li>
+          <li>Maintain generous clear space on all sides</li>
+          <li>Use white version on all dark or coloured backgrounds</li>
+          <li>Keep logo paired with "Real Estate Investment" sub-label in formal contexts</li>
+          <li>Reproduce at minimum 28px height for legibility</li>
+        </ul>
+      </div>
+      <div class="logo-rule logo-rule--dont">
+        <div class="logo-rule__tag">Don't</div>
+        <ul>
+          <li>Apply drop shadows, glows, or outlines to the logo</li>
+          <li>Stretch, squish, or alter the proportions</li>
+          <li>Place on busy photographic backgrounds without overlay</li>
+          <li>Use on mid-tone grey backgrounds where contrast is unclear</li>
+          <li>Re-colour or modify any elements of the mark</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 05 UI ELEMENTS ===== -->
+<section class="guide-section bg-white" id="ui">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="section-label">05 — UI Elements</span>
+      <h2 class="section-title">Simple, minimal, corporate.</h2>
+      <p class="section-desc">All interactive elements follow a restrained, institutional style. Buttons are flat with no radius or heavy shadow. Hover states are clear but not animated. Links use subtle underline or arrow treatment.</p>
+    </div>
+
+    <div class="ui-row">
+      <span class="ui-row-label">Primary Button</span>
+      <span class="btn-primary">Contact Us</span>
+      <span class="btn-state-label">Default</span>
+      <span class="btn-primary-hover">Contact Us</span>
+      <span class="btn-state-label">Hover</span>
+    </div>
+
+    <div class="ui-row">
+      <span class="ui-row-label">Secondary Button</span>
+      <span class="btn-secondary">View Projects</span>
+      <span class="btn-state-label">Default</span>
+      <span class="btn-secondary-hover">View Projects</span>
+      <span class="btn-state-label">Hover</span>
+    </div>
+
+    <div class="ui-row">
+      <span class="ui-row-label">Text Links</span>
+      <span class="ui-text-link">Explore Our Platform →</span>
+      <span class="btn-state-label">Hover / Active</span>
+      <span class="ui-text-link-plain">Explore Our Platform →</span>
+      <span class="btn-state-label">Default</span>
+    </div>
+
+    <div class="ui-row ui-row--dark">
+      <span class="ui-row-label">On Dark Backgrounds</span>
+      <span class="btn-primary">Contact Us</span>
+      <span style="display:inline-block;background:transparent;color:#fff;font-family:var(--font);font-size:12px;font-weight:500;letter-spacing:1px;text-transform:uppercase;padding:14px 28px;border:1px solid rgba(255,255,255,0.35);cursor:default;">Learn More</span>
+      <span style="font-size:14px;font-weight:500;color:var(--white);display:inline-flex;align-items:center;gap:6px;border-bottom:1px solid rgba(255,255,255,0.4);padding-bottom:2px;">View All Projects →</span>
+    </div>
+
+    <div style="margin-top:2px;display:grid;grid-template-columns:1fr 1fr;gap:2px;">
+      <div style="background:var(--white);border:1px solid var(--border);padding:36px 40px;">
+        <span class="ui-row-label" style="display:block;margin-bottom:16px;">Section Label Style</span>
+        <span style="font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--stone);">OUR PLATFORM</span>
+        <br /><br />
+        <span style="font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--stone);">TRACK RECORD</span>
+        <br /><br />
+        <span style="font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--stone);">FEATURED PROJECTS</span>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--border);border-left:none;padding:36px 40px;">
+        <span class="ui-row-label" style="display:block;margin-bottom:16px;">Stat Display</span>
+        <div style="font-size:48px;font-weight:400;letter-spacing:-2px;color:var(--navy);line-height:1;">$750M+</div>
+        <div style="font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--stone);margin-top:8px;">Mixed-Use Transactions</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 06 VOICE & TONE ===== -->
+<section class="guide-section bg-off" id="voice">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="section-label">06 — Voice &amp; Tone</span>
+      <h2 class="section-title">Clear, confident, and investor-grade.</h2>
+      <p class="section-desc">All copy should feel like it was written by someone who deeply understands the market — not a marketing team. Short sentences. No fluff. No salesy language. Performance and discipline in every word.</p>
+    </div>
+
+    <div class="voice-attrs">
+      <div class="voice-attr">
+        <div class="voice-attr__word">Clear</div>
+        <div class="voice-attr__opp">Not → Jargon-heavy</div>
+        <div class="voice-attr__desc">Every sentence earns its place. If it doesn't add meaning, it doesn't belong on the page.</div>
+      </div>
+      <div class="voice-attr">
+        <div class="voice-attr__word">Confident</div>
+        <div class="voice-attr__opp">Not → Overpromising</div>
+        <div class="voice-attr__desc">We let performance speak. No superlatives or empty claims. Data and track record do the work.</div>
+      </div>
+      <div class="voice-attr">
+        <div class="voice-attr__word">Strategic</div>
+        <div class="voice-attr__opp">Not → Casual</div>
+        <div class="voice-attr__desc">We communicate at the level of our audience — institutional partners, investors, and operators.</div>
+      </div>
+      <div class="voice-attr">
+        <div class="voice-attr__word">Minimal</div>
+        <div class="voice-attr__opp">Not → Wordy</div>
+        <div class="voice-attr__desc">Three words where ten would do. Short paragraphs. Let white space carry the weight.</div>
+      </div>
+      <div class="voice-attr">
+        <div class="voice-attr__word">Direct</div>
+        <div class="voice-attr__opp">Not → Hedged</div>
+        <div class="voice-attr__desc">We make statements, not suggestions. We say what we do and what we stand for without qualification.</div>
+      </div>
+      <div class="voice-attr">
+        <div class="voice-attr__word">Grounded</div>
+        <div class="voice-attr__opp">Not → Hype-driven</div>
+        <div class="voice-attr__desc">Every claim is rooted in real performance, real assets, and real relationships.</div>
+      </div>
+    </div>
+
+    <div style="height:40px;"></div>
+
+    <div class="tone-grid">
+      <div class="tone-card tone-card--yes">
+        <div class="tone-card__tag">Write This</div>
+        <div class="tone-card__example">"Driven by data. Grounded in market insight. Built for long-term value."</div>
+        <div class="tone-card__note">Short, declarative, confident. No excess words. Reads like a firm that knows exactly what it's doing.</div>
+      </div>
+      <div class="tone-card tone-card--no">
+        <div class="tone-card__tag">Not This</div>
+        <div class="tone-card__example">"We are thrilled to offer our clients truly exceptional and world-class real estate investment opportunities!"</div>
+        <div class="tone-card__note">Overly enthusiastic, vague, and lacks credibility. Exclamation marks and superlatives undermine institutional tone.</div>
+      </div>
+      <div class="tone-card tone-card--yes">
+        <div class="tone-card__tag">Write This</div>
+        <div class="tone-card__example">"18 North co-invests meaningful GP capital in every transaction. Our interests are aligned at every level."</div>
+        <div class="tone-card__note">Specific, transparent, and trust-building. Tells the investor something real, not a slogan.</div>
+      </div>
+      <div class="tone-card tone-card--no">
+        <div class="tone-card__tag">Not This</div>
+        <div class="tone-card__example">"We are passionate about real estate and truly believe in creating amazing communities for everyone!"</div>
+        <div class="tone-card__note">Sounds like a consumer brand, not an investment firm. Passion and belief without evidence carry no weight.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 07 IMAGERY ===== -->
+<section class="guide-section bg-white" id="imagery">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="section-label">07 — Imagery</span>
+      <h2 class="section-title">Wide. Calm. Architectural.</h2>
+      <p class="section-desc">Photography carries the visual weight of the brand. 18 North's portfolio provides strong aerial, architectural, and development imagery. Use it large, uncropped, and without heavy treatment.</p>
+    </div>
+  </div>
+  <div style="padding:0 56px;max-width:calc(var(--max) + 112px);margin:0 auto;">
+    <div class="imagery-grid">
+      <div class="imagery-cell imagery-cell--tall">
+        <img src="media/images/Sterling%20Park.jpg" alt="Sterling Park aerial" />
+        <div class="imagery-cell__caption">Aerial — Portfolio Asset</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:4px;">
+        <div class="imagery-cell imagery-cell--short">
+          <img src="media/images/Sterling%20Park%20(1).jpg" alt="Sterling Park pool" />
+          <div class="imagery-cell__caption">Community Amenity</div>
+        </div>
+        <div class="imagery-cell imagery-cell--short">
+          <img src="media/images/The%20Sterling.jpg" alt="The Sterling" />
+          <div class="imagery-cell__caption">Multifamily — Aerial</div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:4px;">
+        <div class="imagery-cell imagery-cell--short">
+          <img src="media/images/West%20Apartments.JPG" alt="West Apartments" />
+          <div class="imagery-cell__caption">Urban Infill</div>
+        </div>
+        <div class="imagery-cell imagery-cell--short">
+          <img src="media/images/Reserve%20at%20151st%2C%20Bixby.JPG" alt="Reserve at 151st" />
+          <div class="imagery-cell__caption">Ground-Up Development</div>
+        </div>
+      </div>
+    </div>
+    <div class="imagery-rules">
+      <div class="imagery-rule imagery-rule--do">
+        <div class="imagery-rule__tag">Use</div>
+        <ul>
+          <li>Aerial and architectural photography of actual assets</li>
+          <li>Wide landscape crops with generous sky or ground</li>
+          <li>Construction progress and development site imagery</li>
+          <li>Clean exteriors in good natural light</li>
+          <li>Before/after comparisons in investment case studies</li>
+          <li>Minimal or no text overlays</li>
+        </ul>
+      </div>
+      <div class="imagery-rule imagery-rule--dont">
+        <div class="imagery-rule__tag">Avoid</div>
+        <ul>
+          <li>Generic business handshake or lifestyle stock photography</li>
+          <li>Heavy filters, vignetting, or dramatic colour grading</li>
+          <li>Busy collages or grid arrangements of small photos</li>
+          <li>Overused city skyline imagery unrelated to portfolio</li>
+          <li>Rounded corners beyond 4–8px</li>
+          <li>Drop shadows on photography</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 08 LAYOUT & SPACING ===== -->
+<section class="guide-section bg-off" id="layout">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="section-label">08 — Layout &amp; Spacing</span>
+      <h2 class="section-title">Space is not empty — it's structural.</h2>
+      <p class="section-desc">The layout system is built on a 12-column grid with generous section padding. White space is intentional and load-bearing. Never fill space for the sake of it.</p>
+    </div>
+
+    <div class="spacing-grid">
+      <div class="spacing-item">
+        <div class="spacing-bar" style="height:120px;"></div>
+        <div class="spacing-item__value">120px</div>
+        <div class="spacing-item__label">Section Padding</div>
+        <div class="spacing-item__use">Top and bottom padding on all primary sections — desktop</div>
+      </div>
+      <div class="spacing-item">
+        <div class="spacing-bar" style="height:72px;"></div>
+        <div class="spacing-item__value">72px</div>
+        <div class="spacing-item__label">Mobile Padding</div>
+        <div class="spacing-item__use">Top and bottom section padding on viewport ≤768px</div>
+      </div>
+      <div class="spacing-item">
+        <div class="spacing-bar" style="height:48px;"></div>
+        <div class="spacing-item__value">1180px</div>
+        <div class="spacing-item__label">Max Content Width</div>
+        <div class="spacing-item__use">Inner container maximum — 48px horizontal padding</div>
+      </div>
+      <div class="spacing-item">
+        <div class="spacing-bar" style="height:24px;"></div>
+        <div class="spacing-item__value">640px</div>
+        <div class="spacing-item__label">Text Block Width</div>
+        <div class="spacing-item__use">Maximum width for body copy paragraphs for optimal reading</div>
+      </div>
+    </div>
+
+    <div class="layout-rule-grid">
+      <div class="layout-rule">
+        <span class="layout-rule__num">01</span>
+        <div class="layout-rule__title">Full-Width Sections</div>
+        <div class="layout-rule__desc">All sections span the full browser width. Content is constrained by the inner container, never the section itself.</div>
+      </div>
+      <div class="layout-rule">
+        <span class="layout-rule__num">02</span>
+        <div class="layout-rule__title">Thin Borders Over Cards</div>
+        <div class="layout-rule__desc">Prefer 1px border treatment over boxed card shadows. Borders feel editorial and restrained. Heavy shadows feel dated.</div>
+      </div>
+      <div class="layout-rule">
+        <span class="layout-rule__num">03</span>
+        <div class="layout-rule__title">Alternating Backgrounds</div>
+        <div class="layout-rule__desc">White and off-white sections alternate to create visual rhythm without colour changes. Dark sections are used sparingly for impact.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="doc-footer">
+  <div class="doc-footer__inner">
+    <div class="doc-footer__brand">
+      <img src="media/images/18%20North%20Corp%20Logo%20-%20Icon%20Only.png" alt="18 North Corp" />
+      <div class="doc-footer__brand-text">
+        <span class="doc-footer__brand-name">18 North Corp</span>
+        <span class="doc-footer__brand-sub">Real Estate Investment</span>
+      </div>
+    </div>
+    <div class="doc-footer__right">
+      <div class="doc-footer__version">Brand Guidelines v1.0 — June 2025</div>
+      <div class="doc-footer__note">Confidential. For internal and approved partner use only.</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
