@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>18 North Corp — Vertically Integrated Real Estate Investment & Development</title>
+  <meta name="description" content="18 North Corp is a vertically integrated real estate investment, development, and management firm focused on multifamily communities across Oklahoma, Arkansas, and U.S. growth markets." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="/" class="nav__logo">
+      <span class="nav__logo-main">18 North Corp</span>
+      <span class="nav__logo-sub">Real Estate Investment</span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav__links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#platform">Platform</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#insights">Insights</a></li>
+        <li><a href="#contact" class="nav__cta">Contact Us</a></li>
+      </ul>
+    </nav>
+    <button class="nav__menu-toggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <!--
+    VIDEO SOURCE: Replace src with your own hosted video file.
+    Recommended: aerial multifamily / real estate footage at 1920×1080.
+    Free sources: Pexels.com, Coverr.co, Pixabay.com
+  -->
+  <video
+    class="hero__video"
+    autoplay
+    muted
+    loop
+    playsinline
+    poster="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1920&q=80"
+    aria-hidden="true"
+  >
+    <source src="https://www.pexels.com/download/video/2169871/" type="video/mp4" />
+    <!-- Fallback: poster image shows if video fails to load -->
+  </video>
+  <div class="hero__overlay" aria-hidden="true"></div>
+  <div class="hero__content">
+    <span class="hero__eyebrow">Oklahoma · Arkansas · U.S. Markets</span>
+    <h1 class="hero__headline">Vertically Integrated Real Estate Investment &amp; Development</h1>
+    <p class="hero__sub">A disciplined investment platform built around value-add multifamily and ground-up development — from acquisition through asset management.</p>
+    <div class="hero__ctas">
+      <a href="#platform" class="btn-primary">Our Platform</a>
+      <a href="#projects" class="btn-secondary" style="color:#fff; border-color:rgba(255,255,255,0.4);">View Projects</a>
+    </div>
+  </div>
+  <div class="hero__scroll" aria-hidden="true">
+    <div class="hero__scroll-line"></div>
+    <span class="hero__scroll-label">Scroll</span>
+  </div>
+</section>
+
+<!-- ===== STATS BAR ===== -->
+<section class="stats" aria-label="Company statistics">
+  <div class="stats__inner container" data-stagger>
+    <div class="stats__item fade-up">
+      <span class="stats__number" data-target="80" data-prefix="$" data-suffix="M+">$80M+</span>
+      <span class="stats__label">Assets Under Management</span>
+      <span class="stats__desc">Across active and realized portfolios</span>
+    </div>
+    <div class="stats__item fade-up">
+      <span class="stats__number" data-target="500" data-suffix="+">500+</span>
+      <span class="stats__label">Units Acquired &amp; Renovated</span>
+      <span class="stats__desc">Value-add multifamily communities</span>
+    </div>
+    <div class="stats__item fade-up">
+      <span class="stats__number" data-target="15" data-suffix="+">15+</span>
+      <span class="stats__label">Transactions Completed</span>
+      <span class="stats__desc">Across acquisition and disposition</span>
+    </div>
+    <div class="stats__item fade-up">
+      <span class="stats__number" data-target="3">3</span>
+      <span class="stats__label">Active Markets</span>
+      <span class="stats__desc">Oklahoma, Arkansas &amp; growing</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COMPANY OVERVIEW ===== -->
+<section class="overview" id="about" aria-labelledby="overview-heading">
+  <div class="container">
+    <div class="overview__grid">
+      <div class="overview__text fade-up">
+        <span class="label">About 18 North Corp</span>
+        <h2 class="section-heading overview__heading">Built to invest, develop, and manage — under one roof</h2>
+        <p class="body-copy overview__body">
+          18 North Corp is a privately held real estate investment and operating company specializing in value-add multifamily acquisitions and ground-up development. Our vertically integrated platform — spanning development, asset management, general partner services, and shared services — means we control quality and performance at every stage of the investment lifecycle.
+        </p>
+        <p class="body-copy overview__body" style="margin-bottom:36px;">
+          Driven by data. Grounded in market insight. Built for long-term value. We target high-growth markets where deep local relationships and operational discipline create meaningful advantages for our investors and communities.
+        </p>
+        <a href="#platform" class="arrow-link">Explore Our Platform <span>→</span></a>
+      </div>
+      <div class="overview__image fade-up">
+        <img
+          src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=900&q=80"
+          alt="Multifamily residential community exterior"
+          loading="lazy"
+        />
+        <div class="overview__tag">
+          <span class="overview__tag-num">$80M+</span>
+          <span class="overview__tag-text">Assets Under Management</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PLATFORM VERTICALS ===== -->
+<section class="platform" id="platform" aria-labelledby="platform-heading">
+  <div class="container">
+    <div class="platform__header fade-up">
+      <div>
+        <span class="label">Our Platform</span>
+        <h2 class="section-heading platform__heading" id="platform-heading">Four integrated disciplines. One unified approach.</h2>
+      </div>
+      <a href="#contact" class="arrow-link" style="white-space:nowrap;">Connect with Us <span>→</span></a>
+    </div>
+    <div class="platform__grid" data-stagger>
+      <div class="platform__card fade-up">
+        <span class="platform__card-num">01</span>
+        <div class="platform__card-divider"></div>
+        <h3 class="platform__card-title">Development Corporation</h3>
+        <p class="platform__card-body">Ground-up multifamily development from site selection and entitlement through construction, delivery, and lease-up. We manage the full development cycle with precision and discipline.</p>
+        <a href="#contact" class="platform__card-link">Learn More <span>→</span></a>
+      </div>
+      <div class="platform__card fade-up">
+        <span class="platform__card-num">02</span>
+        <div class="platform__card-divider"></div>
+        <h3 class="platform__card-title">Asset Management</h3>
+        <p class="platform__card-body">Active, hands-on asset management across every investment in our portfolio. We execute renovation programs, optimize operations, and drive income growth to maximize long-term value creation.</p>
+        <a href="#contact" class="platform__card-link">Learn More <span>→</span></a>
+      </div>
+      <div class="platform__card fade-up">
+        <span class="platform__card-num">03</span>
+        <div class="platform__card-divider"></div>
+        <h3 class="platform__card-title">General Partner</h3>
+        <p class="platform__card-body">We serve as GP on our investment structures, co-investing meaningful capital alongside our limited partners. Our interests are aligned at every level of the capital stack.</p>
+        <a href="#contact" class="platform__card-link">Learn More <span>→</span></a>
+      </div>
+      <div class="platform__card fade-up">
+        <span class="platform__card-num">04</span>
+        <div class="platform__card-divider"></div>
+        <h3 class="platform__card-title">Shared Services</h3>
+        <p class="platform__card-body">Centralized financial reporting, investor relations, compliance, and back-office operations that support every business line — ensuring consistency, transparency, and scalability as we grow.</p>
+        <a href="#contact" class="platform__card-link">Learn More <span>→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURED PROJECTS ===== -->
+<section class="projects" id="projects" aria-labelledby="projects-heading">
+  <div class="container">
+    <div class="projects__header fade-up">
+      <div>
+        <span class="label">Featured Projects</span>
+        <h2 class="section-heading" id="projects-heading">Active portfolio highlights</h2>
+      </div>
+      <a href="#contact" class="arrow-link">View All Projects <span>→</span></a>
+    </div>
+    <div class="projects__grid" data-stagger>
+
+      <!-- Project 1 — Large featured card -->
+      <div class="project-card fade-up">
+        <div class="project-card__image">
+          <img
+            src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=900&q=80"
+            alt="Autumn Ridge Apartments exterior"
+            loading="lazy"
+          />
+        </div>
+        <div class="project-card__body">
+          <span class="project-card__status">Active — Value-Add</span>
+          <h3 class="project-card__name">Autumn Ridge</h3>
+          <p class="project-card__location">Oklahoma City, Oklahoma</p>
+          <div class="project-card__metrics">
+            <div>
+              <div class="project-card__metric-value">148</div>
+              <div class="project-card__metric-label">Units</div>
+            </div>
+            <div>
+              <div class="project-card__metric-value">$6.2M</div>
+              <div class="project-card__metric-label">Acquisition</div>
+            </div>
+            <div>
+              <div class="project-card__metric-value">Full</div>
+              <div class="project-card__metric-label">Renovation</div>
+            </div>
+          </div>
+          <a href="#contact" class="arrow-link">View Project <span>→</span></a>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card fade-up">
+        <div class="project-card__image">
+          <img
+            src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=700&q=80"
+            alt="Sterling Briarwood Apartments"
+            loading="lazy"
+          />
+        </div>
+        <div class="project-card__body">
+          <span class="project-card__status">Active — Value-Add</span>
+          <h3 class="project-card__name">Sterling Briarwood</h3>
+          <p class="project-card__location">Tulsa, Oklahoma</p>
+          <div class="project-card__metrics">
+            <div>
+              <div class="project-card__metric-value">96</div>
+              <div class="project-card__metric-label">Units</div>
+            </div>
+            <div>
+              <div class="project-card__metric-value">$4.1M</div>
+              <div class="project-card__metric-label">Acquisition</div>
+            </div>
+          </div>
+          <a href="#contact" class="arrow-link">View Project <span>→</span></a>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card fade-up">
+        <div class="project-card__image">
+          <img
+            src="https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?w=700&q=80"
+            alt="Reserve on 29th development"
+            loading="lazy"
+          />
+        </div>
+        <div class="project-card__body">
+          <span class="project-card__status">Active — Ground-Up</span>
+          <h3 class="project-card__name">Reserve on 29th</h3>
+          <p class="project-card__location">Fayetteville, Arkansas</p>
+          <div class="project-card__metrics">
+            <div>
+              <div class="project-card__metric-value">72</div>
+              <div class="project-card__metric-label">Units</div>
+            </div>
+            <div>
+              <div class="project-card__metric-value">New</div>
+              <div class="project-card__metric-label">Construction</div>
+            </div>
+          </div>
+          <a href="#contact" class="arrow-link">View Project <span>→</span></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== THE 18 NORTH ADVANTAGE ===== -->
+<section class="advantage" id="advantage" aria-labelledby="advantage-heading">
+  <div class="container">
+    <div class="advantage__header fade-up">
+      <span class="label">The 18 North Advantage</span>
+      <h2 class="section-heading" id="advantage-heading" style="max-width:560px;">What sets us apart from the market</h2>
+    </div>
+    <div class="advantage__grid" data-stagger>
+      <div class="advantage__item fade-up">
+        <span class="advantage__num">01</span>
+        <h3 class="advantage__title">Leadership Expertise</h3>
+        <p class="advantage__body">Our principals bring decades of combined experience across acquisition, development, construction management, and property operations. We have built businesses, not just bought assets — and that operational depth defines how we underwrite and manage every deal.</p>
+      </div>
+      <div class="advantage__item fade-up">
+        <span class="advantage__num">02</span>
+        <h3 class="advantage__title">Financial Alignment</h3>
+        <p class="advantage__body">18 North co-invests meaningful GP capital in every transaction. Our team's capital is at risk alongside yours. This alignment structures every decision we make — from underwriting discipline to renovation scope to exit timing.</p>
+      </div>
+      <div class="advantage__item fade-up">
+        <span class="advantage__num">03</span>
+        <h3 class="advantage__title">Existing Infrastructure</h3>
+        <p class="advantage__body">Unlike emerging sponsors, 18 North has an established operating platform. Our in-house development, asset management, and shared services teams are already in place — allowing us to execute efficiently from day one without building from scratch on each deal.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== INVESTOR CTA STRIP ===== -->
+<section class="cta-strip" id="contact" aria-labelledby="cta-heading">
+  <div class="container">
+    <span class="cta-strip__eyebrow">Get in Touch</span>
+    <h2 class="cta-strip__heading" id="cta-heading">Connect with 18 North</h2>
+    <p class="cta-strip__sub">Whether you're an investor, broker, lender, or development partner — we'd like to hear from you.</p>
+    <div class="cta-strip__btns">
+      <a href="mailto:info@18northcorp.com" class="btn-primary">Contact Us</a>
+      <a href="#about" class="btn-outline-white">Learn About the Firm</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" aria-label="Site footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <div class="footer__brand-name">18 North Corp</div>
+        <div class="footer__brand-sub">Real Estate Investment</div>
+        <p class="footer__tagline">A vertically integrated real estate investment, development, and management firm focused on value-add multifamily.</p>
+      </div>
+      <div>
+        <div class="footer__col-title">Company</div>
+        <ul class="footer__links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#platform">Platform</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">Platform</div>
+        <ul class="footer__links">
+          <li><a href="#platform">Development</a></li>
+          <li><a href="#platform">Asset Management</a></li>
+          <li><a href="#platform">General Partner</a></li>
+          <li><a href="#platform">Shared Services</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">Markets</div>
+        <ul class="footer__links">
+          <li><a href="#projects">Oklahoma City, OK</a></li>
+          <li><a href="#projects">Tulsa, OK</a></li>
+          <li><a href="#projects">Fayetteville, AR</a></li>
+          <li><a href="#contact">Other U.S. Markets</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span class="footer__copy">&copy; 2024 18 North Corp. All rights reserved.</span>
+      <div class="footer__legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Disclosures</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
