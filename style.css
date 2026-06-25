@@ -415,6 +415,7 @@ a { text-decoration: none; color: inherit; }
   letter-spacing: -2px;
   color: var(--navy);
   line-height: 1;
+  white-space: nowrap;
 }
 .stats__label {
   font-size: 11px;
