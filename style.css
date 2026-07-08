@@ -512,20 +512,33 @@ a { text-decoration: none; color: inherit; }
   transition: background 0.25s;
 }
 .platform__card:hover { background: var(--navy); }
-.platform__card:hover .platform__card-num,
 .platform__card:hover .platform__card-title,
 .platform__card:hover .platform__card-body,
 .platform__card:hover .platform__card-link { color: var(--white); }
 .platform__card:hover .platform__card-link { border-color: rgba(255,255,255,0.4); }
 .platform__card:hover .platform__card-divider { background: rgba(255,255,255,0.2); }
 
-.platform__card-num {
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 1.5px;
-  color: var(--stone);
-  margin-bottom: 32px;
-  transition: color 0.25s;
+.platform__card-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.platform__card-icon {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+.platform__card-icon img {
+  width: 64px;
+  height: 64px;
+  display: block;
 }
 .platform__card-divider {
   width: 32px;
@@ -539,7 +552,7 @@ a { text-decoration: none; color: inherit; }
   font-weight: 400;
   letter-spacing: -0.5px;
   color: var(--charcoal);
-  margin-bottom: 16px;
+  margin-bottom: 0;
   transition: color 0.25s;
 }
 .platform__card-body {
