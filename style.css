@@ -526,8 +526,8 @@ a { text-decoration: none; color: inherit; }
   transition: background 0.25s, border-color 0.25s;
 }
 .platform__card-icon {
-  width: 80px;
-  height: 80px;
+  width: 88px;
+  height: 88px;
   flex-shrink: 0;
   border-radius: 50%;
   background: var(--white);
@@ -537,8 +537,8 @@ a { text-decoration: none; color: inherit; }
   box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
 .platform__card-icon img {
-  width: 64px;
-  height: 64px;
+  width: 70px;
+  height: 70px;
   display: block;
 }
 .platform__card-title {
@@ -1078,6 +1078,23 @@ a { text-decoration: none; color: inherit; }
 }
 .footer__contact a { transition: color 0.2s; }
 .footer__contact a:hover { color: var(--white); }
+.footer__social {
+  display: flex;
+  gap: 10px;
+}
+.footer__social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 50%;
+  color: rgba(255,255,255,0.5);
+  transition: color 0.2s, border-color 0.2s;
+}
+a.footer__social-icon:hover { color: var(--white); border-color: rgba(255,255,255,0.4); }
 .footer__bottom {
   display: flex;
   justify-content: space-between;
