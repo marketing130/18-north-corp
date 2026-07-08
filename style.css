@@ -505,25 +505,23 @@ a { text-decoration: none; color: inherit; }
 }
 .platform__card {
   background: var(--white);
+  padding: 40px 36px 36px;
   display: flex;
   flex-direction: column;
   transition: background 0.25s;
 }
 .platform__card:hover { background: var(--navy); }
-.platform__card:hover .platform__card-banner { background: var(--navy); border-color: rgba(255,255,255,0.15); }
 .platform__card:hover .platform__card-title,
 .platform__card:hover .platform__card-body,
 .platform__card:hover .platform__card-link { color: var(--white); }
 .platform__card:hover .platform__card-link { border-color: rgba(255,255,255,0.4); }
+.platform__card:hover .platform__card-divider { background: rgba(255,255,255,0.2); }
 
-.platform__card-banner {
-  background: var(--white);
-  border-bottom: 1px solid var(--border);
+.platform__card-head {
   display: flex;
   align-items: center;
   gap: 18px;
-  padding: 20px 28px;
-  transition: background 0.25s, border-color 0.25s;
+  margin-bottom: 24px;
 }
 .platform__card-icon {
   width: 88px;
@@ -549,11 +547,12 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 0;
   transition: color 0.25s;
 }
-.platform__card-content {
-  padding: 32px 36px 36px;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+.platform__card-divider {
+  width: 32px;
+  height: 1px;
+  background: var(--border);
+  margin-bottom: 24px;
+  transition: background 0.25s;
 }
 .platform__card-body {
   font-size: 14px;
@@ -1153,8 +1152,7 @@ a.footer__social-icon:hover { color: var(--white); border-color: rgba(255,255,25
 
   .platform__header { flex-direction: column; align-items: flex-start; gap: 24px; }
   .platform__grid { grid-template-columns: 1fr; }
-  .platform__card-banner { padding: 24px; }
-  .platform__card-content { padding: 28px 24px 32px; }
+  .platform__card { padding: 32px 24px 32px; }
 
   .projects__header { flex-direction: column; align-items: flex-start; gap: 20px; }
   .projects__grid { grid-template-columns: 1fr; }
