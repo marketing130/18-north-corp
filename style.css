@@ -550,6 +550,13 @@ body.no-scroll { overflow: hidden; }
   margin-bottom: 72px;
 }
 .platform__heading { max-width: 480px; }
+.platform__subtext {
+  max-width: 540px;
+  margin-top: 16px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--grey);
+}
 .platform__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -568,6 +575,7 @@ body.no-scroll { overflow: hidden; }
 .platform__card:hover .platform__card-title,
 .platform__card:hover .platform__card-body,
 .platform__card:hover .platform__card-link { color: var(--white); }
+.platform__card:hover .platform__card-sub { color: rgba(255,255,255,0.65); }
 
 .platform__card-head {
   display: flex;
@@ -594,6 +602,16 @@ body.no-scroll { overflow: hidden; }
   letter-spacing: -0.5px;
   color: var(--charcoal);
   margin-bottom: 0;
+  transition: color 0.25s;
+}
+.platform__card-sub {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--stone);
+  margin-top: 6px;
   transition: color 0.25s;
 }
 .platform__card-body {
@@ -1024,7 +1042,7 @@ body.no-scroll { overflow: hidden; }
 }
 .footer__top {
   display: grid;
-  grid-template-columns: 1.8fr 1fr 1fr 1fr 1.3fr;
+  grid-template-columns: 1.7fr 0.9fr 1.6fr 0.9fr 1.3fr;
   gap: 40px;
   padding-bottom: 60px;
   border-bottom: 1px solid rgba(255,255,255,0.08);
