@@ -32,9 +32,10 @@ function animateCounter(el) {
   const isDecimal = el.dataset.decimal === 'true';
   const duration = 1800;
 
-  /* Lock the element width to its rendered size (full final value is in the
-     HTML before JS runs), so the layout never shifts as digits change. */
-  el.style.minWidth = el.offsetWidth + 'px';
+  /* Lock the element width in `ch` units (full final value is in the HTML
+     before JS runs) so the layout never shifts as digits change, and the
+     lock still scales correctly if the viewport is resized afterward. */
+  el.style.minWidth = el.textContent.length + 'ch';
 
   const start = performance.now();
 
@@ -144,8 +145,19 @@ document.addEventListener('keydown', (e) => {
 const toggle = document.querySelector('.nav__menu-toggle');
 const mobileOverlay = document.querySelector('.nav__mobile');
 if (toggle && mobileOverlay) {
+  const closeMobileMenu = () => {
+    mobileOverlay.classList.remove('open');
+    toggle.classList.remove('active');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('no-scroll');
+  };
   toggle.addEventListener('click', () => {
-    mobileOverlay.classList.toggle('open');
-    document.body.classList.toggle('no-scroll');
+    const isOpen = mobileOverlay.classList.toggle('open');
+    toggle.classList.toggle('active', isOpen);
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    document.body.classList.toggle('no-scroll', isOpen);
+  });
+  mobileOverlay.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMobileMenu);
   });
 }
