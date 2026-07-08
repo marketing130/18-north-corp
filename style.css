@@ -456,7 +456,7 @@ body.no-scroll { overflow: hidden; }
 }
 .stats__item {
   min-width: 0;
-  padding: 56px 40px;
+  padding: 56px 24px;
   border-right: 1px solid var(--border);
   display: flex;
   flex-direction: column;
@@ -464,9 +464,9 @@ body.no-scroll { overflow: hidden; }
 }
 .stats__item:last-child { border-right: none; }
 .stats__number {
-  font-size: clamp(44px, 5vw, 64px);
+  font-size: clamp(36px, 4.2vw, 56px);
   font-weight: 400;
-  letter-spacing: -2px;
+  letter-spacing: -1.5px;
   color: var(--navy);
   line-height: 1;
   white-space: nowrap;
@@ -568,29 +568,24 @@ body.no-scroll { overflow: hidden; }
 .platform__card:hover .platform__card-title,
 .platform__card:hover .platform__card-body,
 .platform__card:hover .platform__card-link { color: var(--white); }
-.platform__card:hover .platform__card-link { border-color: rgba(255,255,255,0.4); }
-.platform__card:hover .platform__card-divider { background: rgba(255,255,255,0.2); }
 
 .platform__card-head {
   display: flex;
   align-items: center;
   gap: 18px;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 .platform__card-icon {
-  width: 88px;
-  height: 88px;
+  width: 96px;
+  height: 96px;
   flex-shrink: 0;
-  border-radius: 50%;
-  background: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
 .platform__card-icon img {
-  width: 70px;
-  height: 70px;
+  width: 96px;
+  height: 96px;
   display: block;
 }
 .platform__card-title {
@@ -600,13 +595,6 @@ body.no-scroll { overflow: hidden; }
   color: var(--charcoal);
   margin-bottom: 0;
   transition: color 0.25s;
-}
-.platform__card-divider {
-  width: 32px;
-  height: 1px;
-  background: var(--border);
-  margin-bottom: 24px;
-  transition: background 0.25s;
 }
 .platform__card-body {
   font-size: 14px;
@@ -625,9 +613,7 @@ body.no-scroll { overflow: hidden; }
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 4px;
-  transition: color 0.25s, border-color 0.25s, gap 0.2s;
+  transition: color 0.25s, gap 0.2s;
 }
 .platform__card-link:hover { gap: 10px; }
 
