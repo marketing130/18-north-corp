@@ -972,7 +972,7 @@ a { text-decoration: none; color: inherit; }
 }
 .footer__top {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 1.8fr 1fr 1fr 1fr 1.3fr;
   gap: 40px;
   padding-bottom: 60px;
   border-bottom: 1px solid rgba(255,255,255,0.08);
@@ -1034,6 +1034,37 @@ a { text-decoration: none; color: inherit; }
   transition: color 0.2s;
 }
 .footer__links a:hover { color: var(--white); }
+.footer__contact {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.footer__contact li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.footer__contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 50%;
+  color: rgba(255,255,255,0.5);
+  margin-top: -2px;
+}
+.footer__contact a,
+.footer__contact span {
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.5;
+}
+.footer__contact a { transition: color 0.2s; }
+.footer__contact a:hover { color: var(--white); }
 .footer__bottom {
   display: flex;
   justify-content: space-between;
