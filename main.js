@@ -44,7 +44,7 @@ function animateCounter(el) {
     const progress = Math.min(elapsed / duration, 1);
     const eased = 1 - Math.pow(1 - progress, 3);
     const current = target * eased;
-    el.textContent = prefix + (isDecimal ? current.toFixed(1) : Math.floor(current)) + suffix;
+    el.textContent = prefix + (isDecimal ? current.toFixed(1) : Math.floor(current).toLocaleString('en-US')) + suffix;
     if (progress < 1) requestAnimationFrame(update);
   }
   requestAnimationFrame(update);
