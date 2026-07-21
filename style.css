@@ -1333,10 +1333,6 @@ a.footer__social-icon:hover { color: var(--white); border-color: rgba(255,255,25
   .completed__gallery { grid-template-columns: 1fr; }
   .completed__gallery-main { height: 360px; }
   .completed__gallery-item { height: 200px; }
-
-  .info-grid { grid-template-columns: 1fr; }
-  .info-grid__item { border-right: none; border-bottom: 1px solid var(--border); }
-  .info-grid__item:last-child { border-bottom: none; }
 }
 
 @media (max-width: 768px) {
@@ -1387,4 +1383,8 @@ a.footer__social-icon:hover { color: var(--white); border-color: rgba(255,255,25
   .focus-item__title { width: 100%; }
 
   .quote-banner { padding: 64px 0; }
+
+  .info-grid { grid-template-columns: 1fr; }
+  .info-grid__item { border-right: none; border-bottom: 1px solid var(--border); }
+  .info-grid__item:last-child { border-bottom: none; }
 }
