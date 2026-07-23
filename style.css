@@ -1659,6 +1659,9 @@ a.team-card:hover { opacity: 0.72; }
   scroll-margin-top: 100px;
 }
 .bio-profile:not(:last-child) { border-bottom: 1px solid var(--border); }
+.bio-profile--reverse { grid-template-columns: 1fr 260px; }
+.bio-profile--reverse > div:first-child { order: 2; }
+.bio-profile--reverse > div:last-child { order: 1; }
 .bio-profile__photo {
   width: 100%;
   aspect-ratio: 3 / 4;
@@ -1781,6 +1784,9 @@ a.team-card:hover { opacity: 0.72; }
   .team-grid--four { grid-template-columns: repeat(2, 1fr); }
   .bio-profile { grid-template-columns: 1fr; gap: 28px; }
   .bio-profile__photo { max-width: 220px; }
+  .bio-profile--reverse { grid-template-columns: 1fr; }
+  .bio-profile--reverse > div:first-child,
+  .bio-profile--reverse > div:last-child { order: initial; }
 
   .photo-strip { grid-template-columns: repeat(2, 1fr); }
   .photo-strip--small { max-width: 100%; }
