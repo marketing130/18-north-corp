@@ -1450,8 +1450,36 @@ a.footer__social-icon:hover { color: var(--white); border-color: rgba(255,255,25
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid var(--border);
+  cursor: zoom-in;
 }
-.location-map img { display: block; width: 100%; height: auto; }
+.location-map img { display: block; width: 100%; height: auto; transition: transform 0.5s ease; }
+.location-map:hover img { transform: scale(1.04); }
+
+/* ===== PHOTO STRIP (distributed image moments, replaces bottom-heavy mosaic) ===== */
+.photo-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 36px 0 48px;
+}
+.photo-strip--small {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 480px;
+  margin: 16px 0 0;
+}
+.photo-strip__item {
+  aspect-ratio: 4 / 3;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: zoom-in;
+}
+.photo-strip__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.photo-strip__item:hover img { transform: scale(1.05); }
 
 .project-profile__gallery {
   display: grid;
@@ -1627,6 +1655,9 @@ a.team-card:hover { opacity: 0.72; }
   .team-grid--four { grid-template-columns: repeat(2, 1fr); }
   .bio-profile { grid-template-columns: 1fr; gap: 28px; }
   .bio-profile__photo { max-width: 220px; }
+
+  .photo-strip { grid-template-columns: repeat(2, 1fr); }
+  .photo-strip--small { max-width: 100%; }
 
   .footer__top { grid-template-columns: 1fr; gap: 36px; }
   .footer__bottom { flex-direction: column; align-items: flex-start; }
