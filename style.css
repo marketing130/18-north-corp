@@ -618,6 +618,18 @@ body.no-scroll { overflow: hidden; }
 .copy-section__body p { font-size: 16px; line-height: 1.75; color: var(--grey); margin-bottom: 24px; }
 .copy-section__body p:last-child { margin-bottom: 0; }
 
+.copy-section__columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+}
+.copy-section__column:first-child {
+  padding-right: 56px;
+  border-right: 1px solid var(--border);
+}
+.copy-section__column p { font-size: 16px; line-height: 1.75; color: var(--grey); margin-bottom: 24px; }
+.copy-section__column p:last-child { margin-bottom: 0; }
+
 /* ===== QUOTE BANNER ===== */
 .quote-banner {
   background: var(--near-black);
@@ -1831,6 +1843,9 @@ a.team-card:hover { opacity: 0.72; }
   .overview__grid { grid-template-columns: 1fr; gap: 48px; }
   .overview__image { height: 360px; }
   .overview__text { max-width: 100%; }
+
+  .copy-section__columns { grid-template-columns: 1fr; gap: 40px; }
+  .copy-section__column:first-child { padding-right: 0; border-right: none; padding-bottom: 40px; border-bottom: 1px solid var(--border); }
 
   .platform__header { flex-direction: column; align-items: flex-start; gap: 24px; }
   .platform__grid { grid-template-columns: 1fr; }
