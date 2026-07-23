@@ -1444,6 +1444,15 @@ a.footer__social-icon:hover { color: var(--white); border-color: rgba(255,255,25
 .project-profile__col .subsection-title { margin-top: 28px; }
 .project-profile__col .subsection-title:first-child { margin-top: 0; }
 
+.location-map {
+  margin-top: 16px;
+  max-width: 380px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.location-map img { display: block; width: 100%; height: auto; }
+
 .project-profile__gallery {
   display: grid;
   grid-template-columns: 1fr 1fr;
