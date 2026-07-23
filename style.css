@@ -1142,6 +1142,7 @@ body.no-scroll { overflow: hidden; }
   border-bottom: 1px solid var(--border);
 }
 .structure__header { margin-bottom: 56px; }
+.structure__header .section-heading { margin-bottom: 24px; }
 .structure__header .body-copy { max-width: 760px; margin-bottom: 20px; }
 .structure__header .body-copy:last-child { margin-bottom: 0; }
 .structure__diagram {
@@ -1152,9 +1153,6 @@ body.no-scroll { overflow: hidden; }
   width: 100%;
   max-width: 920px;
   height: auto;
-  background: var(--white);
-  border: 1px solid var(--border);
-  padding: 32px;
 }
 
 /* ===== ADVANTAGE ===== */
@@ -1681,7 +1679,6 @@ a.team-card:hover { opacity: 0.72; }
   .advantage__item:last-child { border-bottom: none; }
 
   .intro-grid { grid-template-columns: 1fr; }
-  .structure__diagram img { padding: 16px; }
 
   .stats__inner { grid-template-columns: 1fr 1fr; }
   .stats__item { padding: 32px 20px; }
