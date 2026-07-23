@@ -504,6 +504,34 @@ body.no-scroll { overflow: hidden; }
   flex: 1;
 }
 
+/* ===== DRAFT CONTENT TAG (marks sections awaiting final client copy) ===== */
+.draft-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--stone);
+  border: 1px solid var(--border);
+  padding: 6px 12px;
+  margin-bottom: 20px;
+}
+.draft-tag::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--stone);
+  flex-shrink: 0;
+}
+.draft-tag--dark {
+  color: rgba(255,255,255,0.55);
+  border-color: rgba(255,255,255,0.2);
+}
+.draft-tag--dark::before { background: rgba(255,255,255,0.55); }
+
 /* ===== INFO GRID (3-col bordered — approach / segments) ===== */
 .info-section { padding: var(--pad-section) 0; background: var(--white); }
 .info-section--off {
