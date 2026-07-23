@@ -1124,6 +1124,16 @@ body.no-scroll { overflow: hidden; }
   border-bottom: 1px solid var(--border);
 }
 .advantage__header { margin-bottom: 80px; }
+.advantage__diagram {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 64px;
+}
+.advantage__diagram img {
+  width: 100%;
+  max-width: 620px;
+  height: auto;
+}
 .advantage__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
