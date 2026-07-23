@@ -1286,6 +1286,85 @@ body.no-scroll { overflow: hidden; }
   margin-bottom: 36px;
 }
 
+/* ===== CONTACT: REACH THE RIGHT TEAM ===== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid var(--border);
+}
+.contact-card {
+  padding: 44px 32px;
+  border-right: 1px solid var(--border);
+}
+.contact-card:last-child { border-right: none; }
+.contact-card__title {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.3px;
+  color: var(--charcoal);
+  margin-bottom: 14px;
+}
+.contact-card__desc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--grey);
+  margin-bottom: 22px;
+}
+
+/* ===== CONTACT: OUR OFFICES ===== */
+.office-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.office-card__photo {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  margin-bottom: 24px;
+  background: var(--white);
+}
+.office-card__city {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -0.3px;
+  color: var(--charcoal);
+  margin-bottom: 10px;
+}
+.office-card__address {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--grey);
+  margin-bottom: 18px;
+}
+
+/* ===== CONTACT: BUSINESS LINES ===== */
+.bizline-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.bizline-card {
+  display: block;
+  text-align: center;
+  padding: 44px 24px;
+  border: 1px solid var(--border);
+  transition: border-color 0.2s;
+}
+.bizline-card:hover { border-color: var(--navy); }
+.bizline-card__icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 22px;
+}
+.bizline-card__title {
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: -0.2px;
+  color: var(--charcoal);
+  margin-bottom: 14px;
+}
+.bizline-card .arrow-link { justify-content: center; }
+
 /* ===== CTA STRIP ===== */
 .cta-strip {
   background: var(--near-black);
@@ -1729,6 +1808,12 @@ a.team-card:hover { opacity: 0.72; }
   .spec-item:nth-child(3) { border-right: none; }
   .spec-item:nth-child(-n+3) { border-bottom: 1px solid var(--border); }
   .spec-item:last-child { border-bottom: none; }
+
+  .contact-grid { grid-template-columns: repeat(2, 1fr); }
+  .contact-card:nth-child(2) { border-right: none; }
+  .contact-card:nth-child(-n+2) { border-bottom: 1px solid var(--border); }
+  .office-grid { grid-template-columns: repeat(2, 1fr); }
+  .bizline-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
@@ -1760,6 +1845,12 @@ a.team-card:hover { opacity: 0.72; }
   .intro-grid { grid-template-columns: 1fr; }
   .image-break { height: 260px; }
   .teaser { padding: 90px 0; }
+
+  .contact-grid { grid-template-columns: 1fr; }
+  .contact-card { border-right: none; border-bottom: 1px solid var(--border); }
+  .contact-card:last-child { border-bottom: none; }
+  .office-grid { grid-template-columns: 1fr; }
+  .bizline-grid { grid-template-columns: 1fr; }
 
   .stats__inner { grid-template-columns: 1fr 1fr; }
   .stats__item { padding: 32px 20px; }
