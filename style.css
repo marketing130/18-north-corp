@@ -1466,7 +1466,9 @@ a.footer__social-icon:hover { color: var(--white); border-color: rgba(255,255,25
   max-width: 480px;
   margin: 16px 0 0;
 }
+.photo-strip--two { grid-template-columns: repeat(2, 1fr); }
 .photo-strip__item {
+  position: relative;
   aspect-ratio: 4 / 3;
   overflow: hidden;
   cursor: zoom-in;
@@ -1478,6 +1480,18 @@ a.footer__social-icon:hover { color: var(--white); border-color: rgba(255,255,25
   transition: transform 0.5s ease;
 }
 .photo-strip__item:hover img { transform: scale(1.05); }
+.photo-strip__caption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 10px 14px;
+  background: linear-gradient(to top, rgba(10,22,40,0.65), transparent);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.9);
+  pointer-events: none;
+}
 
 .project-profile__gallery {
   display: grid;
