@@ -1210,6 +1210,82 @@ body.no-scroll { overflow: hidden; }
   color: var(--grey);
 }
 
+/* ===== MISSION STATEMENT ===== */
+.mission {
+  padding: var(--pad-section) 0;
+  background: var(--off-white);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.mission__inner { max-width: 900px; margin: 0 auto; text-align: center; }
+.mission__inner .label { margin-bottom: 24px; }
+.mission__text {
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 300;
+  line-height: 1.45;
+  letter-spacing: -0.3px;
+  color: var(--charcoal);
+}
+
+/* ===== FULL-BLEED IMAGE BREAK ===== */
+.image-break {
+  position: relative;
+  height: 440px;
+  overflow: hidden;
+}
+.image-break img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.72);
+}
+.image-break__caption {
+  position: absolute;
+  bottom: 32px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* ===== LEADERSHIP TEASER ===== */
+.teaser {
+  position: relative;
+  padding: 140px 0;
+  overflow: hidden;
+}
+.teaser__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.teaser__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10,22,40,0.45), rgba(10,22,40,0.8));
+}
+.teaser__content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.teaser__content .label { color: var(--stone); margin-bottom: 20px; }
+.teaser__title {
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: 400;
+  letter-spacing: -1px;
+  color: var(--white);
+  margin-bottom: 36px;
+}
+
 /* ===== CTA STRIP ===== */
 .cta-strip {
   background: var(--near-black);
@@ -1679,6 +1755,8 @@ a.team-card:hover { opacity: 0.72; }
   .advantage__item:last-child { border-bottom: none; }
 
   .intro-grid { grid-template-columns: 1fr; }
+  .image-break { height: 260px; }
+  .teaser { padding: 90px 0; }
 
   .stats__inner { grid-template-columns: 1fr 1fr; }
   .stats__item { padding: 32px 20px; }
