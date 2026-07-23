@@ -1461,6 +1461,88 @@ a.footer__social-icon:hover { color: var(--white); border-color: rgba(255,255,25
   text-align: center;
 }
 
+/* ===== TEAM ===== */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.team-grid--four { grid-template-columns: repeat(4, 1fr); margin-top: 32px; }
+.team-card { display: block; text-align: center; }
+.team-card__photo {
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background: var(--off-white);
+}
+.team-card__name {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+  color: var(--charcoal);
+  margin-bottom: 4px;
+}
+.team-card__title {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--grey);
+}
+a.team-card { transition: opacity 0.2s; }
+a.team-card:hover { opacity: 0.72; }
+
+.bio-profile {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 56px;
+  padding: 64px 0;
+  scroll-margin-top: 100px;
+}
+.bio-profile:not(:last-child) { border-bottom: 1px solid var(--border); }
+.bio-profile__photo {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  background: var(--off-white);
+}
+.bio-profile__name {
+  font-size: clamp(24px, 2.4vw, 32px);
+  font-weight: 400;
+  letter-spacing: -0.8px;
+  color: var(--charcoal);
+  line-height: 1.2;
+}
+.bio-profile__title {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-top: 10px;
+}
+.bio-profile__points { display: flex; flex-direction: column; }
+.bio-point { display: flex; gap: 24px; padding: 22px 0; border-bottom: 1px solid var(--border); }
+.bio-point:first-child { padding-top: 0; }
+.bio-point:last-child { border-bottom: none; padding-bottom: 0; }
+.bio-point__icon {
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--off-white);
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bio-point__text {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--grey);
+}
+
 /* ===== MOBILE ===== */
 @media (max-width: 1024px) {
   .container { padding: 0 32px; }
@@ -1531,6 +1613,11 @@ a.footer__social-icon:hover { color: var(--white); border-color: rgba(255,255,25
   .spec-item:last-child { border-bottom: none; }
   .project-profile__body { grid-template-columns: 1fr; gap: 40px; }
   .project-profile__gallery { grid-template-columns: 1fr; }
+
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .team-grid--four { grid-template-columns: repeat(2, 1fr); }
+  .bio-profile { grid-template-columns: 1fr; gap: 28px; }
+  .bio-profile__photo { max-width: 220px; }
 
   .footer__top { grid-template-columns: 1fr; gap: 36px; }
   .footer__bottom { flex-direction: column; align-items: flex-start; }

@@ -33,7 +33,15 @@
     <nav aria-label="Primary">
       <ul class="nav__links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li class="nav__dropdown-wrap">
+          <button class="nav__dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+            About <svg class="nav__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <ul class="nav__dropdown" role="menu">
+            <li role="none"><a href="about.html" role="menuitem">About Us</a></li>
+            <li role="none"><a href="our-team.html" role="menuitem">Our Team</a></li>
+          </ul>
+        </li>
         <li class="nav__dropdown-wrap">
           <button class="nav__dropdown-trigger" aria-expanded="false" aria-haspopup="true">
             Verticals <svg class="nav__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -64,7 +72,8 @@
   <div class="nav__mobile" id="nav-mobile">
     <ul class="nav__mobile-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="our-team.html">Our Team</a></li>
       <li><a href="index.html#platform">Verticals</a></li>
       <li><a href="index.html#projects">Projects</a></li>
       <li><a href="index.html#contact" class="nav__mobile-cta">Contact Us</a></li>
@@ -277,6 +286,7 @@
         <ul class="footer__links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
+          <li><a href="our-team.html">Our Team</a></li>
           <li><a href="active-projects.html">Active Projects</a></li>
           <li><a href="completed-projects.html">Realized Investments</a></li>
           <li><a href="index.html#contact">Contact Us</a></li>
