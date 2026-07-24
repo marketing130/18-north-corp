@@ -1631,11 +1631,8 @@ a.footer__social-icon:hover { color: var(--white); border-color: rgba(255,255,25
   font-size: 11px;
   line-height: 1.6;
   color: rgba(255,255,255,0.28);
-  border-top: 1px solid rgba(255,255,255,0.08);
-  padding-top: 24px;
   margin-top: 32px;
   margin-bottom: 24px;
-  max-width: 900px;
 }
 .footer__bottom {
   display: flex;
