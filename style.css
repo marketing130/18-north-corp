@@ -1194,14 +1194,72 @@ body.no-scroll { overflow: hidden; }
 .structure__header .section-heading { margin-bottom: 24px; }
 .structure__header .body-copy { max-width: 760px; margin-bottom: 20px; }
 .structure__header .body-copy:last-child { margin-bottom: 0; }
-.structure__diagram {
-  display: flex;
-  justify-content: center;
+.org-chart { max-width: 1040px; margin: 0 auto; }
+.org-chart__parent {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 20px 44px;
+  background: var(--near-black);
+  text-align: center;
 }
-.structure__diagram img {
+.org-chart__parent-label { display: block; font-size: 16px; font-weight: 600; color: var(--white); letter-spacing: -0.1px; }
+.org-chart__parent-sub { display: block; font-size: 11px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-top: 6px; }
+.org-chart__trunk { width: 1px; height: 32px; background: var(--border); margin: 0 auto; }
+.org-chart__branches {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  position: relative;
+}
+.org-chart__branches::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 12.5%;
+  right: 12.5%;
+  height: 1px;
+  background: var(--border);
+}
+.org-chart__branch {
+  position: relative;
+  padding-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.org-chart__branch::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 32px;
+  background: var(--border);
+  transform: translateX(-50%);
+}
+.org-chart__division {
   width: 100%;
-  max-width: 920px;
-  height: auto;
+  padding: 16px 14px;
+  border: 1px solid var(--border);
+  background: var(--white);
+}
+.org-chart__division-title { font-size: 14px; font-weight: 600; color: var(--charcoal); letter-spacing: -0.1px; }
+.org-chart__leaves {
+  list-style: none;
+  width: 100%;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.org-chart__leaves li {
+  font-size: 12.5px;
+  line-height: 1.4;
+  color: var(--grey);
+  padding: 9px 10px;
+  border: 1px solid var(--border);
+  background: var(--off-white);
 }
 
 /* ===== ADVANTAGE ===== */
@@ -1838,6 +1896,10 @@ a.team-card:hover { opacity: 0.72; }
   .contact-card:nth-child(-n+2) { border-bottom: 1px solid var(--border); }
   .office-grid { grid-template-columns: repeat(2, 1fr); }
   .bizline-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .org-chart__branches { grid-template-columns: repeat(2, 1fr); row-gap: 48px; }
+  .org-chart__branches::before { display: none; }
+  .org-chart__branch::before { height: 24px; }
 }
 
 @media (max-width: 768px) {
@@ -1877,6 +1939,9 @@ a.team-card:hover { opacity: 0.72; }
   .contact-card:last-child { border-bottom: none; }
   .office-grid { grid-template-columns: 1fr; }
   .bizline-grid { grid-template-columns: 1fr; }
+
+  .org-chart__branches { grid-template-columns: 1fr; row-gap: 40px; }
+  .org-chart__trunk { height: 24px; }
 
   .stats__inner { grid-template-columns: 1fr 1fr; }
   .stats__item { padding: 32px 20px; }
