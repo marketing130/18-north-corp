@@ -470,6 +470,11 @@ body.no-scroll { overflow: hidden; }
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
+.focus-section--white {
+  background: var(--white);
+  border-top: none;
+  border-bottom: none;
+}
 .focus-section__header { max-width: 640px; margin-bottom: 56px; }
 .focus-list {
   border-top: 1px solid var(--border);
@@ -729,6 +734,11 @@ body.no-scroll { overflow: hidden; }
 .overview {
   padding: var(--pad-section) 0;
   background: var(--white);
+}
+.overview--off {
+  background: var(--off-white);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 .overview__grid {
   display: grid;
