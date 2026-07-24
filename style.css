@@ -629,6 +629,15 @@ body.no-scroll { overflow: hidden; }
 }
 .copy-section__column p { font-size: 16px; line-height: 1.75; color: var(--grey); margin-bottom: 24px; }
 .copy-section__column p:last-child { margin-bottom: 0; }
+.copy-section__footnote {
+  max-width: 960px;
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--grey);
+}
 
 /* ===== QUOTE BANNER ===== */
 .quote-banner {
