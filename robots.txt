@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /brand-guidelines.html
+
+Sitemap: https://18northcorp.com/sitemap.xml
