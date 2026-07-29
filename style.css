@@ -842,9 +842,10 @@ body.no-scroll { overflow: hidden; }
   align-items: flex-end;
   margin-bottom: 72px;
 }
-.platform__heading { max-width: 480px; }
+.platform__header > div { max-width: 66.6667%; }
+.platform__heading { max-width: 100%; }
 .platform__subtext {
-  max-width: 540px;
+  max-width: 100%;
   margin-top: 16px;
   font-size: 15px;
   line-height: 1.7;
@@ -1973,6 +1974,7 @@ a.team-card:hover { opacity: 0.72; }
   .copy-section__column:first-child { padding-right: 0; border-right: none; padding-bottom: 40px; border-bottom: 1px solid var(--border); }
 
   .platform__header { flex-direction: column; align-items: flex-start; gap: 24px; }
+  .platform__header > div { max-width: 100%; }
   .platform__grid { grid-template-columns: 1fr; }
   .platform__card { padding: 32px 24px 32px; }
 
