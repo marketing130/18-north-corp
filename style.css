@@ -601,6 +601,49 @@ body.no-scroll { overflow: hidden; }
   font-size: 13px;
 }
 
+/* ===== STRATEGY SPLIT (intro left, numbered strategy cards right) ===== */
+.strategy-split {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 72px;
+  align-items: start;
+}
+.strategy-split__intro { position: sticky; top: 120px; }
+.strategy-split__intro .section-heading { margin-top: 20px; }
+.strategy-split__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.strategy-item {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 28px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--navy);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.strategy-item:hover {
+  transform: translateX(4px);
+  box-shadow: 0 8px 28px rgba(13,17,23,0.07);
+}
+.strategy-item__num {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--navy);
+  flex-shrink: 0;
+  min-width: 34px;
+}
+.strategy-item__text {
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--charcoal);
+}
+
 /* ===== SUBSECTION TITLE (inline heading within a copy block) ===== */
 .subsection-title {
   font-size: 22px;
@@ -1200,9 +1243,9 @@ body.no-scroll { overflow: hidden; }
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
-.structure__header { margin-bottom: 56px; }
+.structure__header { margin-bottom: 56px; max-width: 66.6667%; }
 .structure__header .section-heading { margin-bottom: 24px; }
-.structure__header .body-copy { max-width: 760px; margin-bottom: 20px; }
+.structure__header .body-copy { max-width: 100%; margin-bottom: 20px; }
 .structure__header .body-copy:last-child { margin-bottom: 0; }
 .org-chart { max-width: 1040px; margin: 0 auto; }
 .org-chart__parent {
@@ -1921,6 +1964,10 @@ a.team-card:hover { opacity: 0.72; }
   .overview__grid { grid-template-columns: 1fr; gap: 48px; }
   .overview__image { height: 360px; }
   .overview__text { max-width: 100%; }
+
+  .structure__header { max-width: 100%; }
+  .strategy-split { grid-template-columns: 1fr; gap: 40px; }
+  .strategy-split__intro { position: static; }
 
   .copy-section__columns { grid-template-columns: 1fr; gap: 40px; }
   .copy-section__column:first-child { padding-right: 0; border-right: none; padding-bottom: 40px; border-bottom: 1px solid var(--border); }
