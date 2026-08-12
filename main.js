@@ -141,6 +141,46 @@ document.addEventListener('keydown', (e) => {
   });
 })();
 
+/* ===== DEVELOPMENT PROCESS TIMELINE (hover/click to reveal) ===== */
+(function () {
+  const timeline = document.querySelector('.dev-timeline');
+  if (!timeline) return;
+
+  const steps = Array.from(timeline.querySelectorAll('.dev-timeline__step'));
+  const panels = Array.from(timeline.querySelectorAll('.dev-timeline__panel-item'));
+  let pinned = 0;
+
+  function setActive(index) {
+    steps.forEach((step, i) => {
+      const active = i === index;
+      step.classList.toggle('is-active', active);
+      step.setAttribute('aria-selected', String(active));
+    });
+    panels.forEach((panel, i) => {
+      const active = i === index;
+      panel.classList.toggle('is-active', active);
+      panel.hidden = !active;
+    });
+  }
+
+  steps.forEach((step, i) => {
+    step.addEventListener('mouseenter', () => setActive(i));
+    step.addEventListener('focus', () => setActive(i));
+    step.addEventListener('click', () => { pinned = i; setActive(i); });
+    step.addEventListener('mouseleave', () => setActive(pinned));
+    step.addEventListener('blur', () => setActive(pinned));
+  });
+})();
+
+/* ===== BEFORE / AFTER SLIDER ===== */
+document.querySelectorAll('.ba-slider').forEach(slider => {
+  const range = slider.querySelector('.ba-slider__range');
+  if (!range) return;
+  const update = () => slider.style.setProperty('--pos', range.value + '%');
+  range.addEventListener('input', update);
+  update();
+});
+
 /* ===== MOBILE MENU (simple toggle) ===== */
 const toggle = document.querySelector('.nav__menu-toggle');
 const mobileOverlay = document.querySelector('.nav__mobile');
