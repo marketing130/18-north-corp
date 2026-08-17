@@ -1646,6 +1646,7 @@ body.no-scroll { overflow: hidden; }
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 }
+.office-grid.office-grid--single { grid-template-columns: minmax(0, 380px); }
 .office-card__photo {
   aspect-ratio: 4 / 3;
   overflow: hidden;
@@ -1920,6 +1921,21 @@ a.footer__social-icon:hover { color: var(--white); border-color: rgba(255,255,25
   color: var(--charcoal);
   line-height: 1.2;
 }
+.project-profile__meta {
+  margin-top: 10px;
+  font-size: 15px;
+  color: var(--grey);
+}
+.project-profile__overview { max-width: 760px; }
+.project-profile__realization {
+  max-width: 760px;
+  margin-top: 40px;
+  padding: 28px 32px;
+  background: var(--off-white);
+  border-left: 3px solid var(--navy);
+}
+.project-profile__realization .subsection-title { color: var(--navy); }
+.project-profile__realization .body-copy { color: var(--charcoal); }
 
 .project-profile__stats {
   display: grid;
@@ -1930,6 +1946,10 @@ a.footer__social-icon:hover { color: var(--white); border-color: rgba(255,255,25
 }
 .spec-item { padding: 26px 22px; border-right: 1px solid var(--border); }
 .spec-item:last-child { border-right: none; }
+.spec-item--highlight { background: var(--near-black); }
+.spec-item--highlight .spec-value { color: var(--white); }
+.spec-item--highlight .spec-value__sub { color: rgba(255,255,255,0.6); }
+.spec-item--highlight .spec-label { color: rgba(255,255,255,0.55); }
 .spec-value {
   font-size: 19px;
   font-weight: 500;
@@ -1984,6 +2004,8 @@ a.footer__social-icon:hover { color: var(--white); border-color: rgba(255,255,25
   margin: 16px 0 0;
 }
 .photo-strip--two { grid-template-columns: repeat(2, 1fr); }
+.photo-strip--one { grid-template-columns: 1fr; }
+.photo-strip--one .photo-strip__item { aspect-ratio: 16 / 9; }
 .photo-strip__item {
   position: relative;
   aspect-ratio: 4 / 3;
@@ -2222,6 +2244,7 @@ a.team-card:hover { opacity: 0.72; }
   .bio-profile--reverse > div:last-child { order: initial; }
 
   .photo-strip { grid-template-columns: repeat(2, 1fr); }
+  .photo-strip--one { grid-template-columns: 1fr; }
   .photo-strip--small { max-width: 100%; }
 
   .footer__top { grid-template-columns: 1fr; gap: 36px; }
