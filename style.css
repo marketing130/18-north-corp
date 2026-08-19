@@ -1495,6 +1495,10 @@ body.no-scroll { overflow: hidden; }
 }
 .org-chart__division {
   width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 20px 16px;
   border: 1px solid var(--border);
   background: var(--white);
@@ -1508,11 +1512,10 @@ body.no-scroll { overflow: hidden; }
   color: var(--grey);
 }
 .org-chart__branch--muted .org-chart__division {
-  background: var(--off-white);
-  border-style: dashed;
+  background: var(--white);
+  border-color: var(--navy);
   transform: translateY(14px);
 }
-.org-chart__branch--muted .org-chart__division-title { color: var(--stone); font-weight: 500; }
 .org-chart__note {
   max-width: 760px;
   margin: 40px auto 0;
