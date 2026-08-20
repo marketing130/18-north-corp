@@ -2252,7 +2252,8 @@ a.team-card:hover { opacity: 0.72; }
 
   .team-grid { grid-template-columns: repeat(2, 1fr); }
   .team-grid--four { grid-template-columns: repeat(2, 1fr); }
-  .bio-profile { grid-template-columns: 1fr; gap: 28px; }
+  .project-group__header { margin-bottom: 28px; }
+  .bio-profile { grid-template-columns: 1fr; gap: 28px; padding: 40px 0; }
   .bio-profile__photo { max-width: 220px; }
   .bio-profile--reverse { grid-template-columns: 1fr; }
   .bio-profile--reverse > div:first-child,
