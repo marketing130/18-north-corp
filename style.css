@@ -2070,11 +2070,12 @@ a.footer__social-icon:hover { color: var(--white); border-color: rgba(255,255,25
 .team-grid--four { grid-template-columns: repeat(4, 1fr); margin-top: 32px; }
 .team-card { display: block; text-align: center; }
 .team-card__photo {
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 3 / 4;
   overflow: hidden;
   margin-bottom: 20px;
   background: var(--off-white);
 }
+.team-card__photo img { object-position: top center; }
 .team-card__name {
   font-size: 16px;
   font-weight: 500;
@@ -2108,6 +2109,7 @@ a.team-card:hover { opacity: 0.72; }
   margin-bottom: 24px;
   background: var(--off-white);
 }
+.bio-profile__photo img { object-position: top center; }
 .bio-profile__name {
   font-size: clamp(24px, 2.4vw, 32px);
   font-weight: 400;
