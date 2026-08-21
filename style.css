@@ -1603,6 +1603,7 @@ body.no-scroll { overflow: hidden; }
   inset: 0;
   background: linear-gradient(180deg, rgba(10,22,40,0.45), rgba(10,22,40,0.8));
 }
+.teaser--navy { background: var(--near-black); }
 .teaser__content {
   position: relative;
   z-index: 1;
@@ -1646,6 +1647,44 @@ body.no-scroll { overflow: hidden; }
   color: var(--grey);
   margin-bottom: 22px;
   flex-grow: 1;
+}
+
+/* ===== CONTACT: SEND A MESSAGE ===== */
+.contact-form { max-width: 720px; }
+.contact-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.contact-form__field { margin-bottom: 24px; }
+.contact-form__field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--charcoal);
+  margin-bottom: 8px;
+}
+.contact-form__field input,
+.contact-form__field select,
+.contact-form__field textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  background: var(--off-white);
+  font-family: var(--font);
+  font-size: 14px;
+  color: var(--charcoal);
+}
+.contact-form__field textarea { resize: vertical; }
+.contact-form__field input:focus,
+.contact-form__field select:focus,
+.contact-form__field textarea:focus {
+  outline: none;
+  border-color: var(--navy);
+}
+.contact-form button[type="submit"] {
+  border: none;
+  cursor: pointer;
 }
 
 /* ===== CONTACT: OUR OFFICES ===== */
@@ -1947,7 +1986,7 @@ a.footer__social-icon:hover { color: var(--white); border-color: rgba(255,255,25
 
 .project-profile__stats {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   border: 1px solid var(--border);
   background: var(--white);
   margin-bottom: 48px;
@@ -2224,6 +2263,7 @@ a.team-card:hover { opacity: 0.72; }
   .contact-grid { grid-template-columns: 1fr; }
   .contact-card { border-right: none; border-bottom: 1px solid var(--border); }
   .contact-card:last-child { border-bottom: none; }
+  .contact-form__row { grid-template-columns: 1fr; gap: 0; }
   .office-grid { grid-template-columns: 1fr; }
   .bizline-grid { grid-template-columns: 1fr; }
 
@@ -2245,7 +2285,7 @@ a.team-card:hover { opacity: 0.72; }
   .spec-item:nth-child(2n) { border-right: none; }
   .spec-item:nth-child(odd) { border-right: 1px solid var(--border); }
   .spec-item { border-bottom: 1px solid var(--border); }
-  .spec-item:last-child { border-bottom: none; }
+  .spec-item:nth-last-child(-n+2) { border-bottom: none; }
   .project-profile__body { grid-template-columns: 1fr; gap: 40px; }
   .project-profile__col:first-child { padding-right: 0; border-right: none; padding-bottom: 40px; border-bottom: 1px solid var(--border); }
   .project-profile__gallery { grid-template-columns: 1fr; }
